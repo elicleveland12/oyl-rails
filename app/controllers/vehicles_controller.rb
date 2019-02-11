@@ -10,13 +10,13 @@ class VehiclesController < ApplicationController
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
+    session[:vehicle_id] = params[:id]
   end
 
   # GET /vehicles/new
   def new
     @vehicle = Vehicle.new
     @user = session[:user_id].to_i
-    byebug
   end
 
   # GET /vehicles/1/edit
@@ -26,9 +26,7 @@ class VehiclesController < ApplicationController
   # POST /vehicles
   # POST /vehicles.json
   def create
-    byebug
     @vehicle = Vehicle.new(vehicle_params)
-    byebug
     respond_to do |format|
       if @vehicle.save
         format.html { redirect_to @vehicle, notice: 'Vehicle was successfully created.' }

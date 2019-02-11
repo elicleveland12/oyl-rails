@@ -31,9 +31,8 @@
     <%= form.number_field :mechanic_id %>
   </div>
 
-  <div class="field">
-    <%= form.label :vehicle_id %>
-    <%= form.number_field :vehicle_id %>
+  <div class="field" type="hidden">
+    <%= form.hidden_field :vehicle_id, value: @vehicle_id %>
   </div>
 
   <div class="actions">
