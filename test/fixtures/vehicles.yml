@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  make: MyString
+  model: MyString
+  plate: MyString
+  oil_type: MyString
+  oil_quantity: 1
+
+two:
+  year: 1
+  make: MyString
+  model: MyString
+  plate: MyString
+  oil_type: MyString
+  oil_quantity: 1
