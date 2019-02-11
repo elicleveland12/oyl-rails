@@ -4577,6 +4577,7 @@ Processing by VehiclesController#index as HTML
 Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.4ms)
 
 
+<<<<<<< HEAD
 Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 16:08:28 -0500
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/EliCleveland/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
@@ -4839,10 +4840,351 @@ Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/appointments" for 127.0.0.1 at 2019-02-11 16:21:26 -0500
+=======
+Started GET "/users/1" for 127.0.0.1 at 2019-02-11 15:47:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2019-02-11 15:47:30 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-02-11 16:01:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 48ms (Views: 41.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/mechanoc/1" for 127.0.0.1 at 2019-02-11 16:10:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/mechanoc/1"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/mechanics" for 127.0.0.1 at 2019-02-11 16:10:09 -0500
+Processing by MechanicsController#index as HTML
+  Rendering mechanics/index.html.erb within layouts/application
+  [1m[36mMechanic Load (1.1ms)[0m  [1m[34mSELECT "mechanics".* FROM "mechanics"[0m
+  ↳ app/views/mechanics/index.html.erb:17
+  Rendered mechanics/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 73ms (Views: 64.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/mechanics1" for 127.0.0.1 at 2019-02-11 16:10:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/mechanics1"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:10:17 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:67
+  Rendering mechanics/show.html.erb within layouts/application
+  Rendered mechanics/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 61ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-02-11 16:12:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 45ms (Views: 36.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 16:12:55 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-02-11 16:12:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 16:13:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"56na2iL+PdIvy9leD0CojIjcAfnAx5k437LomtdQNhvhBSShoiAyf5+dWubZC4TCr22lVKyECNdbP+c3px2wMw==", "user"=>{"username"=>"Peter", "password"=>"[FILTERED]", "image"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Peter"], ["password", "1234"], ["image", ""], ["created_at", "2019-02-11 21:13:07.708683"], ["updated_at", "2019-02-11 21:13:07.708683"]]
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:31
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2019-02-11 16:13:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2019-02-11 16:13:09 -0500
+Processing by VehiclesController#new as HTML
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (4.7ms)
+  Rendered vehicles/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 27063ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2019-02-11 16:14:18 -0500
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E0sgL0kYoMQ6UJV3g8Jmtu5gUxlwHh5raSxLU9xD3eP1gQ0+8upQFdq0F+PKCsTWoBMuYzfMTrRAvnVEW2+9Dw==", "vehicle"=>{"year"=>"2015", "make"=>"Hyundai", "model"=>"Elantra", "plate"=>"F4C-12X", "oil_type"=>"Regular", "oil_quantity"=>"4", "user_id"=>"3"}, "commit"=>"Create Vehicle"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:33
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:33
+  [1m[36mVehicle Create (1.7ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "plate", "oil_type", "oil_quantity", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["year", 2015], ["make", "Hyundai"], ["model", "Elantra"], ["plate", "F4C-12X"], ["oil_type", "Regular"], ["oil_quantity", 4], ["created_at", "2019-02-11 21:14:28.511108"], ["updated_at", "2019-02-11 21:14:28.511108"], ["user_id", 3]]
+  ↳ app/controllers/vehicles_controller.rb:33
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:33
+Redirected to http://localhost:3000/vehicles/6
+Completed 302 Found in 10404ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:14:28 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2019-02-11 16:16:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+Completed 404 Not Found in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/users_controller.rb:68:in `set_user'
+Started GET "/users/3" for 127.0.0.1 at 2019-02-11 16:16:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 56ms (Views: 45.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:20:44 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:67
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:20:51 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:67
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:23:54 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:67
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:24:02 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:67
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:24:07 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:67
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 27.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2019-02-11 16:24:08 -0500
+Processing by AppointmentsController#new as HTML
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (9.9ms)
+  Rendered appointments/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 66ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2019-02-11 16:31:09 -0500
+Processing by AppointmentsController#new as HTML
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (7.1ms)
+  Rendered appointments/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 66ms (Views: 53.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:31:25 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:68
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 67ms (Views: 46.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2019-02-11 16:31:27 -0500
+Processing by AppointmentsController#new as HTML
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (6.3ms)
+  Rendered appointments/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 53ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2019-02-11 16:31:43 -0500
+Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qxcuuYPm5R7N4cD7a+SYHEzHuS7OMt8GB0ODkxOOWOFN3QOoOBQVzy0FQm8iLDp8ArTEVIngj9ku0b2ElKI4DQ==", "appointment"=>{"date(1i)"=>"2019", "date(2i)"=>"2", "date(3i)"=>"11", "date(4i)"=>"21", "date(5i)"=>"31", "location"=>"nyc", "odometer"=>"70000", "mechanic_id"=>"1", "vehicle_id"=>"6"}, "commit"=>"Create Appointment"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/appointments_controller.rb:32
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:32
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:32
+  [1m[36mAppointment Create (1.0ms)[0m  [1m[32mINSERT INTO "appointments" ("date", "location", "odometer", "mechanic_id", "vehicle_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2019-02-11 21:31:00"], ["location", "nyc"], ["odometer", 70000], ["mechanic_id", 1], ["vehicle_id", 6], ["created_at", "2019-02-11 21:33:18.559188"], ["updated_at", "2019-02-11 21:33:18.559188"]]
+  ↳ app/controllers/appointments_controller.rb:32
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/appointments_controller.rb:32
+Redirected to http://localhost:3000/appointments/1
+Completed 302 Found in 95033ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:33:18 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  Rendered appointments/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appointments/" for 127.0.0.1 at 2019-02-11 16:33:23 -0500
+>>>>>>> 6ac2c766baaf4459ea794a73a66baf09afb8c33e
 Processing by AppointmentsController#index as HTML
   Rendering appointments/index.html.erb within layouts/application
   [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
   ↳ app/views/appointments/index.html.erb:18
+<<<<<<< HEAD
   Rendered appointments/index.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.2ms)
 
@@ -5369,5 +5711,310 @@ Processing by MechanicsController#show as HTML
   ↳ app/views/mechanics/show.html.erb:30
   Rendered mechanics/show.html.erb within layouts/application (16.7ms)
 Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+=======
+  Rendered appointments/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:41:29 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  Rendered appointments/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 35.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:43:03 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 34.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:43:10 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 45.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:43:37 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:26
+  Rendered appointments/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:44:39 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:26
+  Rendered appointments/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:44:47 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:26
+  Rendered appointments/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 1.3ms)
+>>>>>>> 6ac2c766baaf4459ea794a73a66baf09afb8c33e
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:50:36 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/EliCleveland/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:67
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 304ms (Views: 274.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/mechanics/" for 127.0.0.1 at 2019-02-11 16:50:41 -0500
+Processing by MechanicsController#index as HTML
+  Rendering mechanics/index.html.erb within layouts/application
+  [1m[36mMechanic Load (0.3ms)[0m  [1m[34mSELECT "mechanics".* FROM "mechanics"[0m
+  ↳ app/views/mechanics/index.html.erb:17
+  Rendered mechanics/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:50:44 -0500
+Processing by MechanicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZnLWQ6QVBwldIxgPgmI/TpmyjDbTgS8sxpBv+vLz8pKKJJgxcivuceO9Tfwtjnh2lyfekYU9r/2GFGIeWKyYug==", "id"=>"1"}
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mechanics_controller.rb:57
+  [1m[36mMechanic Destroy (0.5ms)[0m  [1m[31mDELETE FROM "mechanics" WHERE "mechanics"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/mechanics_controller.rb:57
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mechanics_controller.rb:57
+Redirected to http://localhost:3000/mechanics
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/mechanics" for 127.0.0.1 at 2019-02-11 16:50:44 -0500
+Processing by MechanicsController#index as HTML
+  Rendering mechanics/index.html.erb within layouts/application
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT "mechanics".* FROM "mechanics"[0m
+  ↳ app/views/mechanics/index.html.erb:17
+  Rendered mechanics/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 16:50:49 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 67ms (Views: 57.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/1" for 127.0.0.1 at 2019-02-11 16:50:53 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S+urdZHQHNCRB16CtMBnc1rQVzjusQ6n+NgyS/LGUnunveUHR+71qC+ZC3EbLCBLVEUFn7gNjna4XD+vWJk4Uw==", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:58
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+Redirected to http://localhost:3000/users
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 16:50:53 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/2" for 127.0.0.1 at 2019-02-11 16:50:54 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n4PBhM1Bcn9R0WorV7he7gmwWNFJQ8clykmzcIrgXbRz1Y/2G3+bB+9PP9j4VBnWByUKdh//R/SKzb6UIL83nA==", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:58
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:58
+Redirected to http://localhost:3000/users
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 16:50:54 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-11 16:50:59 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  Rendered appointments/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"mechanics"}, missing required keys: [:id]):
+    22:         <td><%= appointment.odometer %></td>
+    23:         <td><%= appointment.mechanic_id %></td>
+    24:         <td><%= appointment.vehicle_id %></td>
+    25:         <td><%= link_to 'Accept Job', mechanic_path %></td>
+    26:         <td><%= link_to 'Show', appointment %></td>
+    27:         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+    28:         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/appointments/index.html.erb:25:in `block in _app_views_appointments_index_html_erb___1448999772873356268_70243728845240'
+app/views/appointments/index.html.erb:18:in `_app_views_appointments_index_html_erb___1448999772873356268_70243728845240'
+Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 16:51:28 -0500
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:19
+  Rendered vehicles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/vehicles/1" for 127.0.0.1 at 2019-02-11 16:51:31 -0500
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"y2UwGRoMvk2q+MzUXBbpoj476wfVpDtD/KmTUDvXJ9AnM35rzDJXNRRmmSfz+q6aMK65oIMYu5K8LZ60kYhN+A==", "id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:58
+  [1m[36mVehicle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/vehicles_controller.rb:58
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:58
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 16:51:31 -0500
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:19
+  Rendered vehicles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/vehicles/2" for 127.0.0.1 at 2019-02-11 16:51:32 -0500
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Yn1lbj794nMEbjOLdoHJ+Nfxb6dmuY4ZyHsVwJkW1zyOKysc6MMLC7rwZnjZbY7A2WQ9ADAFDsiI/xgkM0m9FA==", "id"=>"2"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:68
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:58
+  [1m[36mVehicle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/vehicles_controller.rb:58
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:58
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 16:51:32 -0500
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:19
+  Rendered vehicles/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/payments" for 127.0.0.1 at 2019-02-11 16:51:49 -0500
+Processing by PaymentsController#index as HTML
+  Rendering payments/index.html.erb within layouts/application
+  [1m[36mPayment Load (0.2ms)[0m  [1m[34mSELECT "payments".* FROM "payments"[0m
+  ↳ app/views/payments/index.html.erb:19
+  Rendered payments/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 0.5ms)
 
 
