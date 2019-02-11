@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-02-11 10:25:57
+  location: MyString
+  odometer: 1
+  mechanic_id: 1
+  vehicle_id: 1
+
+two:
+  date: 2019-02-11 10:25:57
+  location: MyString
+  odometer: 1
+  mechanic_id: 1
+  vehicle_id: 1
