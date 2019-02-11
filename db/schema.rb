@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_11_152913) do
+ActiveRecord::Schema.define(version: 2019_02_11_180538) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_02_11_152913) do
     t.integer "range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_11_152913) do
     t.integer "mechanic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "price"
   end
 
   create_table "users", force: :cascade do |t|
