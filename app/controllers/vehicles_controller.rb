@@ -15,6 +15,8 @@ class VehiclesController < ApplicationController
   # GET /vehicles/new
   def new
     @vehicle = Vehicle.new
+    @user = session[:user_id].to_i
+    byebug
   end
 
   # GET /vehicles/1/edit
@@ -24,8 +26,9 @@ class VehiclesController < ApplicationController
   # POST /vehicles
   # POST /vehicles.json
   def create
+    byebug
     @vehicle = Vehicle.new(vehicle_params)
-
+    byebug
     respond_to do |format|
       if @vehicle.save
         format.html { redirect_to @vehicle, notice: 'Vehicle was successfully created.' }
@@ -69,6 +72,6 @@ class VehiclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_params
-      params.require(:vehicle).permit(:year, :make, :model, :plate, :oil_type, :oil_quantity)
+      params.require(:vehicle).permit(:year, :make, :model, :plate, :oil_type, :oil_quantity, :user_id)
     end
 end

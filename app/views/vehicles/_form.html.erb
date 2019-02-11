@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= form.label :year %>
     <%= form.number_field :year %>
@@ -41,7 +42,13 @@
     <%= form.number_field :oil_quantity %>
   </div>
 
+  <div class="field" type="hidden">
+    <%= form.hidden_field :user_id, value: @user %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
 <% end %>
