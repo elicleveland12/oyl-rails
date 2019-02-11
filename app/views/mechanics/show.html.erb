@@ -6,19 +6,28 @@
 </p>
 
 <p>
-  <strong>Experience:</strong>
-  <%= @mechanic.experience %>
+  <strong>Accepted Appointments:</strong>
+  <% @mechanic.appointments.each do |appointment| %>
+    <%= appointment.date %>
+    <%= appointment.location %>
+    <%= appointment.odometer %>
+    <%= Vehicle.find_by(id: appointment.vehicle_id)[:year] %>
+    <%= Vehicle.find_by(id: appointment.vehicle_id)[:make] %>
+    <%= Vehicle.find_by(id: appointment.vehicle_id)[:model] %>
+    <%= Vehicle.find_by(id: appointment.vehicle_id)[:plate] %>
+    <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_type] %>
+    <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_quantity] %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Locaiton:</strong>
-  <%= @mechanic.locaiton %>
+  <%= button_to "Service Requests", appointments_path, :method => "get" %>
 </p>
 
 <p>
-  <strong>Range:</strong>
-  <%= @mechanic.range %>
+  <%= button_to "Invoices", payments_path, :method => "get" %>
 </p>
+
 
 <%= link_to 'Edit', edit_mechanic_path(@mechanic) %> |
 <%= link_to 'Back', mechanics_path %>
