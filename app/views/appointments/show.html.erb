@@ -22,7 +22,9 @@
 
 <p>
   <strong>Vehicle:</strong>
-  <%= @appointment.vehicle_id %>
+  Make:<%= Vehicle.find(@appointment.vehicle_id).make %>,
+  Model:<%= Vehicle.find(@appointment.vehicle_id).model %>
+
 </p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |

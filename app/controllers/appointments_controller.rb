@@ -15,6 +15,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    @vehicle_id = session[:vehicle_id].to_i
   end
 
   # GET /appointments/1/edit
@@ -24,6 +25,7 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
+    byebug
     @appointment = Appointment.new(appointment_params)
 
     respond_to do |format|
