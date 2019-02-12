@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  skip_before_action :user_authorized, only: [:new, :create]
+  skip_before_action :mechanic_authorized, only: [:new, :create]
 
 
   def new
@@ -9,9 +11,9 @@ class SessionsController < ApplicationController
   def create
 
    if params[:session][:user_type] == "mechanic"
-     session[:mechanic_id] = Mechanic.find_by(name: params[:session][:username]).id
+     session[:mechanic_id] = Mechanic.find_by(username: params[:session][:username]).id
      redirect_to mechanic_path(session[:mechanic_id])
-     
+
  else
 
     # logged_in_person = User.find_by_name(params[username]).id || Mechani
@@ -27,9 +29,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    byebug
   session.delete :user_id
-  byebug
+  session.delete :mechanic_id
   redirect_to '/'
   end
 

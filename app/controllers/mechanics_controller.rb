@@ -1,6 +1,7 @@
 class MechanicsController < ApplicationController
   before_action :set_mechanic, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :user_authorized
+  skip_before_action :mechanic_authorized, only: [:new, :create, :show]
   # GET /mechanics
   # GET /mechanics.json
   def index
@@ -26,9 +27,10 @@ class MechanicsController < ApplicationController
   # POST /mechanics.json
   def create
     @mechanic = Mechanic.new(mechanic_params)
-
+    byebug
     respond_to do |format|
       if @mechanic.save
+        session[:mechanic_id] = @mechanic.id
         format.html { redirect_to @mechanic, notice: 'Mechanic was successfully created.' }
         format.json { render :show, status: :created, location: @mechanic }
       else
@@ -70,6 +72,6 @@ class MechanicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mechanic_params
-      params.require(:mechanic).permit(:name, :experience, :locaiton, :range)
+      params.require(:mechanic).permit(:name, :experience, :locaiton, :range, :password, :username)
     end
 end
