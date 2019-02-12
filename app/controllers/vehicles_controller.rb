@@ -10,7 +10,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
-    session[:vehicle_id] = params[:id]
+    flash[:vehicle_id] = params[:id]
   end
 
   # GET /vehicles/new

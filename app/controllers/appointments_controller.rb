@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :user_authorized, only: [:new, :create, :show, :destroy]
+  skip_before_action :mechanic_authorized, only: [:index, :edit]
   # GET /appointments
   # GET /appointments.json
   def index
@@ -15,11 +16,13 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
-    @vehicle_id = session[:vehicle_id]
+    @vehicle_id = flash[:vehicle_id]
   end
 
   # GET /appointments/1/edit
   def edit
+    @appointment = Appointment.find(params[:id])
+    @vehicle_id = @appointment.vehicle.id
   end
 
   # POST /appointments
