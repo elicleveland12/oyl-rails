@@ -31,8 +31,10 @@
 </p>
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', vehicles_path %><br>
+<%= link_to 'Back', @vehicle.user %><br>
 
+<%= button_to "Schedule An Appointment", new_appointment_path, :method => "get" %><br>
 
-
-<%= button_to "Schedule An Appointment", new_appointment_path, :method => "get" %>
+<% if Appointment.find_by(vehicle_id: @vehicle.id) != nil %>
+<%= button_to "My Appointments", appointment_path(Appointment.find_by(vehicle_id: @vehicle.id).id), :method => "get" %>
+<% end %>

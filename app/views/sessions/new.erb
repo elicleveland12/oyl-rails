@@ -1,0 +1,17 @@
+<h1>LOGIN</h1>
+<%= form_for :session, url: '/' do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<%= f.label :password %>
+<%= f.text_field :password %>
+<%= f.label "User"  %>
+<%= f.radio_button :user_type, 'user', checked: true %><br>
+<%= f.label "Mechanic"  %>
+<%= f.radio_button :user_type, 'mechanic' %><br>
+<%= f.submit "Log In" %>
+  <% end %>
+
+
+
+
+<%= link_to "Or Create New User", new_user_path %>
