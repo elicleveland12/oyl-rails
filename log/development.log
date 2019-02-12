@@ -1,5 +1,5 @@
 Started GET "/" for 127.0.0.1 at 2019-02-11 10:33:55 -0500
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -7,7 +7,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
 actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
@@ -130,9 +130,9 @@ Processing by MechanicsController#show as HTML
 Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Mechanic with 'id'=index):
-  
+
 app/controllers/mechanics_controller.rb:67:in `set_mechanic'
 Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 10:35:03 -0500
 Processing by VehiclesController#index as HTML
@@ -331,9 +331,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
-  
+
 app/controllers/users_controller.rb:67:in `set_user'
 Started GET "/users/" for 127.0.0.1 at 2019-02-11 11:36:47 -0500
 Processing by UsersController#index as HTML
@@ -452,9 +452,9 @@ Migrating to AddUserIdToVehicles (20190211165537)
 Started GET "/vehichles/" for 127.0.0.1 at 2019-02-11 11:56:59 -0500
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/vehichles"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -794,9 +794,9 @@ Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.4ms)
 
 
 Started POST "/vehicles/new" for 127.0.0.1 at 2019-02-11 12:31:12 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/vehicles/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -825,9 +825,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started POST "/articles/new" for 127.0.0.1 at 2019-02-11 12:31:15 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/articles/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -867,7 +867,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 243ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `new_vehicles_path' for #<#<Class:0x007fa354cead98>:0x007fa353d44600>
 Did you mean?  new_vehicle_path
                new_vehicle_url
@@ -877,12 +877,12 @@ Did you mean?  new_vehicle_path
                edit_vehicle_path):
     25:   <% end %>
     26: </p>
-    27: 
+    27:
     28: <%= button_to "New", new_vehicles_path %>
     29:  "<form method="post" action="/vehicles/new" class="button_to">
     30:   <input value="New" type="submit" />
     31:     </form>"
-  
+
 app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__23101977079743181_70169731410600'
 Started GET "/users/1" for 127.0.0.1 at 2019-02-11 12:31:45 -0500
 Processing by UsersController#show as HTML
@@ -897,9 +897,9 @@ Completed 200 OK in 42ms (Views: 35.7ms | ActiveRecord: 0.5ms)
 
 
 Started POST "/vehicles/new" for 127.0.0.1 at 2019-02-11 12:31:46 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/vehicles/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -928,9 +928,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started POST "/vehicles/new" for 127.0.0.1 at 2019-02-11 12:32:01 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/vehicles/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -971,9 +971,9 @@ Completed 200 OK in 39ms (Views: 33.8ms | ActiveRecord: 0.4ms)
 
 
 Started POST "/vehicles/new" for 127.0.0.1 at 2019-02-11 12:32:22 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/vehicles/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1014,9 +1014,9 @@ Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 0.4ms)
 
 
 Started POST "/vehicles/new" for 127.0.0.1 at 2019-02-11 12:32:43 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/vehicles/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1057,9 +1057,9 @@ Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.4ms)
 
 
 Started POST "/vehicles/new" for 127.0.0.1 at 2019-02-11 12:33:34 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/vehicles/new"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1186,7 +1186,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `new_vehicles_path' for #<#<Class:0x007fa354cead98>:0x007fa353122408>
 Did you mean?  new_vehicle_path
                new_vehicle_url
@@ -1195,10 +1195,10 @@ Did you mean?  new_vehicle_path
                new_polymorphic_path
                edit_vehicle_path):
     26: </p>
-    27: 
+    27:
     28: <%= button_to "New", new_vehicle_path %>
     29:  <%= button_to "Add A Vehicle", new_vehicles_path, :method => "get" %>
-  
+
 app/views/users/show.html.erb:29:in `_app_views_users_show_html_erb__23101977079743181_70169725048560'
 Started GET "/users/1" for 127.0.0.1 at 2019-02-11 12:35:58 -0500
 Processing by UsersController#show as HTML
@@ -1430,17 +1430,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x007fa34dca2b58>:0x007fa3534389f8>
 Did you mean?  user_url):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= collection_select user_id, User.all, :username, :id %>
     46:     <%= form.label :user_id %>
     47:     <%= form.number_field :user_id %>
     48:   </div>
-  
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2629650391840070821_70169684305140'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2629650391840070821_70169684305140'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb___681948862537253819_70169726667580'
@@ -1454,17 +1454,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x007ffccc47a718>:0x007ffcc9b396d8>
 Did you mean?  user_url):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= collection_select user_id, User.all, :username, :id %>
     46:     <%= form.label :user_id %>
     47:     <%= form.number_field :user_id %>
     48:   </div>
-  
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361867826660'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361867826660'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361867911300'
@@ -1476,17 +1476,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 191ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x007ffccc47a718>:0x007ffccc734300>
 Did you mean?  user_url):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= collection_select user_id, User.all, :username, :id %>
     46:     <%= form.label :user_id %>
     47:     <%= form.number_field :user_id %>
     48:   </div>
-  
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361869188020'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361869188020'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361869299340'
@@ -1498,17 +1498,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 199ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x007ffccc47a718>:0x007ffcc991e100>
 Did you mean?  user_url):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.collection_select user_id, User.all, :username, :id %>
     46:     <%= form.label :user_id %>
     47:     <%= form.number_field :user_id %>
     48:   </div>
-  
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361842268400'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361842268400'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361842395520'
@@ -2120,9 +2120,9 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
 
 
-  
+
 NoMethodError (undefined method `find' for #<User:0x007ffcd1a43348>):
-  
+
 app/controllers/users_controller.rb:13:in `show'
 Started GET "/users/2" for 127.0.0.1 at 2019-02-11 13:13:08 -0500
 Processing by UsersController#show as HTML
@@ -2229,7 +2229,7 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:46: syntax error, unexpected '<'
   </div>-->
    ^
@@ -2241,7 +2241,7 @@ SyntaxError (/Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-c
   </div>
    ^
 /Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:57: unterminated regexp meets end of file):
-  
+
 app/views/vehicles/_form.html.erb:46: syntax error, unexpected '<'
 app/views/vehicles/_form.html.erb:51: unknown regexp options - dv
 app/views/vehicles/_form.html.erb:55: syntax error, unexpected '<', expecting ')'
@@ -2277,16 +2277,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 5414ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `user_id' for #<Hash:0x007ffcceea6550>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user, :user_id) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361890076400'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361890076400'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361851890580'
@@ -2335,16 +2335,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `user_id' for #<Hash:0x007ffcd32eba80>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user, :user_id) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361925583680'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361925583680'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361925606940'
@@ -2363,16 +2363,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `{"id"=>1, "username"=>"user 1", "password"=>"password", "image"=>"", "created_at"=>"2019-02-11T16:37:00.733Z", "updated_at"=>"2019-02-11T16:37:00.733Z"}' for #<Hash:0x007ffccea1d088>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user, @user) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361860928920'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361860928920'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361860995220'
@@ -2391,16 +2391,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `id' for #<Hash:0x007ffcceef62a8>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user, @user.id) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361851959420'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361851959420'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361890254080'
@@ -2419,16 +2419,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `{"id"=>1, "username"=>"user 1", "password"=>"password", "image"=>"", "created_at"=>"2019-02-11T16:37:00.733Z", "updated_at"=>"2019-02-11T16:37:00.733Z"}' for #<Hash:0x007ffcd19e0658>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user, @user) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361852889500'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361852889500'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361887899180'
@@ -2447,16 +2447,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `' for #<Hash:0x007ffcd101ecf0>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user, @user[:id]) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361924900740'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361924900740'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361924947480'
@@ -2475,16 +2475,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `1' for #<Hash:0x007ffccb3ae178>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user, @user['id']) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361858843980'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361858843980'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361858897160'
@@ -2529,16 +2529,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 30562ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `id' for #<Hash:0x007ffccef3eeb8>):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user_id, @user.id) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361910940080'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361910940080'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361910988680'
@@ -2603,16 +2603,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user_id, @user[:id]) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361858140240'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361858140240'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361858237400'
@@ -2624,16 +2624,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user_id, @user[:id]) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361900275840'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361900275840'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361908042200'
@@ -2659,16 +2659,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user_id, @user[:id]) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361908120880'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361908120880'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361900224980'
@@ -2680,16 +2680,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user_id, @user[:id]) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361887325300'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361887325300'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361887450320'
@@ -2701,16 +2701,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user_id, @user[:id]) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361910401800'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361910401800'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361924246660'
@@ -2750,16 +2750,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     47:     <%= form.number_field :oil_quantity %>
     48:   </div>
-    49: 
+    49:
     50:   <%= hidden_field(:user_id, @user[:id]) %>
-    51: 
+    51:
     52:   <div class="actions">
     53:     <%= form.submit %>
-  
+
 app/views/vehicles/_form.html.erb:50:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361888493400'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361888493400'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361888497980'
@@ -2828,16 +2828,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 116525ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
     48:   </div>
-    49: 
+    49:
     50:   <div class="field">
     51:     <%= form.hidden_field(:user_id, @user) %>
     52:   </div>
-    53: 
-    54: 
-  
+    53:
+    54:
+
 app/views/vehicles/_form.html.erb:51:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361915871100'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361915871100'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361915919320'
@@ -2865,16 +2865,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     48:   </div>
-    49: 
+    49:
     50:   <div class="field">
     51:     <%= form.hidden_field(:user_id, @user) %>
     52:   </div>
-    53: 
-    54: 
-  
+    53:
+    54:
+
 app/views/vehicles/_form.html.erb:51:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361849129200'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361849129200'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361845589880'
@@ -2900,16 +2900,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     48:   </div>
-    49: 
+    49:
     50:   <div class="field">
     51:     <%= form.hidden_field(:user_id, @user) %>
     52:   </div>
-    53: 
-    54: 
-  
+    53:
+    54:
+
 app/views/vehicles/_form.html.erb:51:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361909599440'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361909599440'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361909461180'
@@ -2975,16 +2975,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     48:   </div>
-    49: 
+    49:
     50:   <div class="field">
     51:     <%= form.hidden_field(:user_id, @user) %>
     52:   </div>
-    53: 
-    54: 
-  
+    53:
+    54:
+
 app/views/vehicles/_form.html.erb:51:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361909725960'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361909725960'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361909752120'
@@ -2996,16 +2996,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     48:   </div>
-    49: 
+    49:
     50:   <div class="field">
     51:     <%= form.hidden_field(:user_id, @user) %>
     52:   </div>
-    53: 
-    54: 
-  
+    53:
+    54:
+
 app/views/vehicles/_form.html.erb:51:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361850930200'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361850930200'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361850835520'
@@ -3029,16 +3029,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     48:   </div>
-    49: 
+    49:
     50:   <div class="field">
     51:     <%= form.hidden_field(:user_id, @user) %>
     52:   </div>
-    53: 
-    54: 
-  
+    53:
+    54:
+
 app/views/vehicles/_form.html.erb:51:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361913236880'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361913236880'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361909594560'
@@ -3062,16 +3062,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     48:   </div>
-    49: 
+    49:
     50:   <div class="field">
     51:     <%= form.hidden_field(:user_id, @user) %>
     52:   </div>
-    53: 
-    54: 
-  
+    53:
+    54:
+
 app/views/vehicles/_form.html.erb:51:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361888849080'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361888849080'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361861239020'
@@ -3150,7 +3150,7 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 77713ms (ActiveRecord: 0.2ms)
 
 
-  
+
 SyntaxError (/Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:51: syntax error, unexpected '<'
 ...reeze;@output_buffer.append=( <input type="hidden" id="user_...
 ...                               ^
@@ -3164,11 +3164,11 @@ SyntaxError (/Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-c
 ...d="user_id" value="#{@user}" />);@output_buffer.safe_append='
 ...                               ^
 /Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:63: syntax error, unexpected keyword_end, expecting ')'
-'.freeze; end 
+'.freeze; end
              ^
 /Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:67: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/vehicles/_form.html.erb:51: syntax error, unexpected '<'
 app/views/vehicles/_form.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
 app/views/vehicles/_form.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
@@ -3187,7 +3187,7 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:51: syntax error, unexpected '<'
 ...reeze;@output_buffer.append=( <input type="hidden" id="user_...
 ...                               ^
@@ -3201,11 +3201,11 @@ SyntaxError (/Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-c
 ...d="user_id" value="#{@user}" />);@output_buffer.safe_append='
 ...                               ^
 /Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:63: syntax error, unexpected keyword_end, expecting ')'
-'.freeze; end 
+'.freeze; end
              ^
 /Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/views/vehicles/_form.html.erb:67: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/vehicles/_form.html.erb:51: syntax error, unexpected '<'
 app/views/vehicles/_form.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
 app/views/vehicles/_form.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
@@ -3318,17 +3318,17 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 120518ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `hidden_form' for #<ActionView::Helpers::FormBuilder:0x007ffcd1c9b7f8>
 Did you mean?  hidden_field):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.hidden_form :user, @user%>
     46:   </div>
-    47: 
-    48: 
-  
+    47:
+    48:
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361911308900'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361911308900'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361911339800'
@@ -3354,17 +3354,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `hidden_form' for #<ActionView::Helpers::FormBuilder:0x007ffcd1ddc108>
 Did you mean?  hidden_field):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.hidden_form :user, @user%>
     46:   </div>
-    47: 
-    48: 
-  
+    47:
+    48:
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361914777780'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361914777780'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361910710200'
@@ -3376,16 +3376,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.hidden_field :user, @user%>
     46:   </div>
-    47: 
-    48: 
-  
+    47:
+    48:
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361899322760'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361899322760'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361899110940'
@@ -3397,16 +3397,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.hidden_field :user_id, @user%>
     46:   </div>
-    47: 
-    48: 
-  
+    47:
+    48:
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361912187080'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361912187080'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361899997980'
@@ -3430,17 +3430,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `number_field_tag' for #<ActionView::Helpers::FormBuilder:0x007ffcca20e5d0>
 Did you mean?  number_field):
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.label :user_id %>
     46:     <%= form.number_field_tag @user %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361849953220'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361849953220'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361869368160'
@@ -3452,17 +3452,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `text_field_tag' for #<ActionView::Helpers::FormBuilder:0x007ffccee3ce48>
 Did you mean?  text_field):
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.label :user_id %>
     46:     <%= form.text_field_tag @user %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361910696240'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361910696240'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361889569460'
@@ -3475,9 +3475,9 @@ Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/vehicles" for 127.0.0.1 at 2019-02-11 15:03:00 -0500
-  
+
 Rack::QueryParser::ParameterTypeError (expected Array (got Rack::QueryParser::Params) for param `vehicle'):
-  
+
 rack (2.0.6) lib/rack/query_parser.rb:99:in `normalize_params'
 rack (2.0.6) lib/rack/query_parser.rb:67:in `block in parse_nested_query'
 rack (2.0.6) lib/rack/query_parser.rb:64:in `each'
@@ -3548,9 +3548,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started POST "/vehicles" for 127.0.0.1 at 2019-02-11 15:03:07 -0500
-  
+
 Rack::QueryParser::ParameterTypeError (expected Array (got Rack::QueryParser::Params) for param `vehicle'):
-  
+
 rack (2.0.6) lib/rack/query_parser.rb:99:in `normalize_params'
 rack (2.0.6) lib/rack/query_parser.rb:67:in `block in parse_nested_query'
 rack (2.0.6) lib/rack/query_parser.rb:64:in `each'
@@ -3621,9 +3621,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started POST "/vehicles" for 127.0.0.1 at 2019-02-11 15:03:40 -0500
-  
+
 Rack::QueryParser::ParameterTypeError (expected Array (got Rack::QueryParser::Params) for param `vehicle'):
-  
+
 rack (2.0.6) lib/rack/query_parser.rb:99:in `normalize_params'
 rack (2.0.6) lib/rack/query_parser.rb:67:in `block in parse_nested_query'
 rack (2.0.6) lib/rack/query_parser.rb:64:in `each'
@@ -3778,17 +3778,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x007ffcd16316d8>:0x007ffccc3d17d0>
 Did you mean?  user_url):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.hidden_field_tag user_id, @user%>
-    46: 
+    46:
     47:   </div>
-    48: 
-  
+    48:
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361845993500'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361845993500'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361867533640'
@@ -3812,17 +3812,17 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `hidden_field_tag' for #<ActionView::Helpers::FormBuilder:0x007ffcd33a0cc8>
 Did you mean?  hidden_field):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.hidden_field_tag :user_id, @user%>
     46:   </div>
-    47: 
-    48: 
-  
+    47:
+    48:
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361926189840'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361926189840'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361926224640'
@@ -3834,16 +3834,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     42:   </div>
-    43: 
+    43:
     44:   <div class="field">
     45:     <%= form.hidden_field :user_id, @user%>
     46:   </div>
-    47: 
-    48: 
-  
+    47:
+    48:
+
 app/views/vehicles/_form.html.erb:45:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361908223100'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361908223100'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361900638040'
@@ -3919,9 +3919,9 @@ Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/vehicles" for 127.0.0.1 at 2019-02-11 15:18:01 -0500
-  
+
 Rack::QueryParser::ParameterTypeError (expected Array (got Rack::QueryParser::Params) for param `vehicle'):
-  
+
 rack (2.0.6) lib/rack/query_parser.rb:99:in `normalize_params'
 rack (2.0.6) lib/rack/query_parser.rb:67:in `block in parse_nested_query'
 rack (2.0.6) lib/rack/query_parser.rb:64:in `each'
@@ -4085,16 +4085,16 @@ Processing by VehiclesController#create as HTML
 Completed 500 Internal Server Error in 223792ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for nil:NilClass):
     43:   </div>
-    44: 
+    44:
     45:   <div class="field">
     46:     <%= form.hidden_field :user_id, @user %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361914434520'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361914434520'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361914499220'
@@ -4120,16 +4120,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for "1":String):
     43:   </div>
-    44: 
+    44:
     45:   <div class="field">
     46:     <%= form.hidden_field :user_id, @user %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361847495280'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361847495280'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361850079400'
@@ -4141,16 +4141,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
     43:   </div>
-    44: 
+    44:
     45:   <div class="field">
     46:     <%= form.hidden_field :user_id, @user.to_i %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361852004860'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361852004860'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361907944220'
@@ -4162,16 +4162,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for "1":String):
     43:   </div>
-    44: 
+    44:
     45:   <div class="field">
     46:     <%= form.hidden_field :user_id, @user %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361926276660'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361926276660'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361926321160'
@@ -4183,16 +4183,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for "1":String):
     43:   </div>
-    44: 
+    44:
     45:   <div class="field">
     46:     <%= form.hidden_field :user_id, @user %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361886508300'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361886508300'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361886592180'
@@ -4204,16 +4204,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for "1":String):
     43:   </div>
-    44: 
+    44:
     45:   <div class="field">
     46:     <%= form.hidden_field :user_id, @user %>
     47:   </div>
-    48: 
-    49: 
-  
+    48:
+    49:
+
 app/views/vehicles/_form.html.erb:46:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361901564780'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361901564780'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361900402420'
@@ -4237,16 +4237,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for "1":String):
-    46: 
+    46:
     47:   <div class="field">
     48:     <%= form.label :user_id %>
     49:     <%= form.number_field :user_id, value=@user %>
     50:   </div>
-    51: 
-    52: 
-  
+    51:
+    52:
+
 app/views/vehicles/_form.html.erb:49:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361851600700'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361851600700'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361908140200'
@@ -4270,16 +4270,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 126147ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for "1":String):
-    46: 
+    46:
     47:   <div class="field">
     48:     <%= form.label :user_id %>
     49:     <%= form.number_field :user_id, value=@user %>
     50:   </div>
-    51: 
-    52: 
-  
+    51:
+    52:
+
 app/views/vehicles/_form.html.erb:49:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361852006600'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361852006600'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361910378700'
@@ -4303,16 +4303,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 9261ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
-    46: 
+    46:
     47:   <div class="field">
     48:     <%= form.label :user_id %>
     49:     <%= form.number_field :user_id, value=@user %>
     50:   </div>
-    51: 
-    52: 
-  
+    51:
+    52:
+
 app/views/vehicles/_form.html.erb:49:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361899816580'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361899816580'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361851597640'
@@ -4336,16 +4336,16 @@ Processing by VehiclesController#new as HTML
 Completed 500 Internal Server Error in 2428ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
-    46: 
+    46:
     47:   <div class="field">
     48:     <%= form.label :user_id %>
     49:     <%= form.number_field :user_id, value=1 %>
     50:   </div>
-    51: 
-    52: 
-  
+    51:
+    52:
+
 app/views/vehicles/_form.html.erb:49:in `block in _app_views_vehicles__form_html_erb__2131339058259666227_70361907893780'
 app/views/vehicles/_form.html.erb:1:in `_app_views_vehicles__form_html_erb__2131339058259666227_70361907893780'
 app/views/vehicles/new.html.erb:3:in `_app_views_vehicles_new_html_erb__848654317797284728_70361852528340'
@@ -4577,16 +4577,26 @@ Processing by VehiclesController#index as HTML
 Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.4ms)
 
 
-<<<<<<< HEAD
-Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 16:08:28 -0500
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/EliCleveland/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
-Processing by VehiclesController#index as HTML
-  Rendering vehicles/index.html.erb within layouts/application
-  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
-  ↳ app/views/vehicles/index.html.erb:19
-  Rendered vehicles/index.html.erb within layouts/application (14.0ms)
-Completed 200 OK in 256ms (Views: 237.8ms | ActiveRecord: 1.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2019-02-11 15:47:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2019-02-11 15:47:30 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 37.3ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/users" for 127.0.0.1 at 2019-02-11 16:08:36 -0500
@@ -4645,10 +4655,10 @@ Processing by MechanicsController#show as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
 
 
-  
+
 SyntaxError (/Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/mechanics/show.html.erb:27: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/mechanics/show.html.erb:29: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/mechanics/show.html.erb:27: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/mechanics/show.html.erb:29: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/mechanics" for 127.0.0.1 at 2019-02-11 16:14:19 -0500
@@ -4674,17 +4684,17 @@ Processing by MechanicsController#show as HTML
 Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Associations::CollectionProxy []>
 Did you mean?  to_xml):
     17: </p>
-    18: 
+    18:
     19: <p>
     20:   <%= button_to "Invoices", @mechanic.payments, :method => "get" %>
     21: </p>
-    22: 
-    23: 
-  
+    22:
+    23:
+
 app/views/mechanics/show.html.erb:20:in `_app_views_mechanics_show_html_erb__2351034661545117418_70250668604100'
 Started GET "/mechanics" for 127.0.0.1 at 2019-02-11 16:15:06 -0500
 Processing by MechanicsController#index as HTML
@@ -4709,17 +4719,17 @@ Processing by MechanicsController#show as HTML
 Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Associations::CollectionProxy []>
 Did you mean?  to_xml):
     17: </p>
-    18: 
+    18:
     19: <p>
     20:   <%= link_to "Invoices", @mechanic.payments %>
     21: </p>
-    22: 
-    23: 
-  
+    22:
+    23:
+
 app/views/mechanics/show.html.erb:20:in `_app_views_mechanics_show_html_erb__2351034661545117418_70250695934920'
 Started GET "/mechanics" for 127.0.0.1 at 2019-02-11 16:15:33 -0500
 Processing by MechanicsController#index as HTML
@@ -4742,18 +4752,18 @@ Processing by MechanicsController#show as HTML
 Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `payment' for #<Mechanic:0x007fc905d62cb8>
 Did you mean?  payments
                payments=):
     17: </p>
-    18: 
+    18:
     19: <p>
     20:   <%= button_to "Invoices", @mechanic.payment, :method => "get" %>
     21: </p>
-    22: 
-    23: 
-  
+    22:
+    23:
+
 app/views/mechanics/show.html.erb:20:in `_app_views_mechanics_show_html_erb__2351034661545117418_70250680524520'
 Started GET "/mechanics" for 127.0.0.1 at 2019-02-11 16:15:37 -0500
 Processing by MechanicsController#index as HTML
@@ -4776,13 +4786,127 @@ Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.2ms)
 Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:15:53 -0500
 Processing by MechanicsController#show as HTML
   Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:10
-  Rendered mechanics/show.html.erb within layouts/application (3.1ms)
-Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  Rendered appointments/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appointments/" for 127.0.0.1 at 2019-02-11 16:33:23 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  Rendered appointments/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:41:29 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  Rendered appointments/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 35.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:43:03 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 34.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:43:10 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 45.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:43:37 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:26
+  Rendered appointments/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:44:39 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:26
+  Rendered appointments/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:44:47 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:69
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:26
+  Rendered appointments/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-11 16:51:12 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.7ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  Rendered appointments/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-11 16:51:14 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  Rendered appointments/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-11 16:55:40 -0500
+=======
+Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 16:08:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/EliCleveland/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:19
+  Rendered vehicles/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 256ms (Views: 237.8ms | ActiveRecord: 1.2ms)
 
 
 Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:16:02 -0500
@@ -4876,9 +5000,9 @@ Completed 200 OK in 48ms (Views: 41.6ms | ActiveRecord: 1.5ms)
 
 
 Started GET "/mechanoc/1" for 127.0.0.1 at 2019-02-11 16:10:01 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/mechanoc/1"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -4916,9 +5040,9 @@ Completed 200 OK in 73ms (Views: 64.1ms | ActiveRecord: 1.9ms)
 
 
 Started GET "/mechanics1" for 127.0.0.1 at 2019-02-11 16:10:14 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/mechanics1"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -5051,9 +5175,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 8ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
-  
+
 app/controllers/users_controller.rb:68:in `set_user'
 Started GET "/users/3" for 127.0.0.1 at 2019-02-11 16:16:08 -0500
 Processing by UsersController#show as HTML
@@ -5107,75 +5231,54 @@ Processing by VehiclesController#show as HTML
 Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.1ms)
 
 
-Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:24:07 -0500
-Processing by VehiclesController#show as HTML
-  Parameters: {"id"=>"6"}
+Started GET "/appointments" for 127.0.0.1 at 2019-02-11 16:16:19 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Mechanic Load (0.0ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
   [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/controllers/vehicles_controller.rb:67
-  Rendering vehicles/show.html.erb within layouts/application
-  Rendered vehicles/show.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 32ms (Views: 27.8ms | ActiveRecord: 0.1ms)
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 0.5ms)
 
 
-Started GET "/appointments/new" for 127.0.0.1 at 2019-02-11 16:24:08 -0500
-Processing by AppointmentsController#new as HTML
-  Rendering appointments/new.html.erb within layouts/application
-  Rendered appointments/_form.html.erb (9.9ms)
-  Rendered appointments/new.html.erb within layouts/application (13.0ms)
-Completed 200 OK in 66ms (Views: 50.0ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/appointments/new" for 127.0.0.1 at 2019-02-11 16:31:09 -0500
-Processing by AppointmentsController#new as HTML
-  Rendering appointments/new.html.erb within layouts/application
-  Rendered appointments/_form.html.erb (7.1ms)
-  Rendered appointments/new.html.erb within layouts/application (10.6ms)
-Completed 200 OK in 66ms (Views: 53.3ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/vehicles/6" for 127.0.0.1 at 2019-02-11 16:31:25 -0500
-Processing by VehiclesController#show as HTML
-  Parameters: {"id"=>"6"}
-  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/controllers/vehicles_controller.rb:68
-  Rendering vehicles/show.html.erb within layouts/application
-  Rendered vehicles/show.html.erb within layouts/application (1.5ms)
-Completed 200 OK in 67ms (Views: 46.1ms | ActiveRecord: 1.6ms)
-
-
-Started GET "/appointments/new" for 127.0.0.1 at 2019-02-11 16:31:27 -0500
-Processing by AppointmentsController#new as HTML
-  Rendering appointments/new.html.erb within layouts/application
-  Rendered appointments/_form.html.erb (6.3ms)
-  Rendered appointments/new.html.erb within layouts/application (8.6ms)
-Completed 200 OK in 53ms (Views: 41.2ms | ActiveRecord: 0.4ms)
-
-
-Started POST "/appointments" for 127.0.0.1 at 2019-02-11 16:31:43 -0500
-Processing by AppointmentsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qxcuuYPm5R7N4cD7a+SYHEzHuS7OMt8GB0ODkxOOWOFN3QOoOBQVzy0FQm8iLDp8ArTEVIngj9ku0b2ElKI4DQ==", "appointment"=>{"date(1i)"=>"2019", "date(2i)"=>"2", "date(3i)"=>"11", "date(4i)"=>"21", "date(5i)"=>"31", "location"=>"nyc", "odometer"=>"70000", "mechanic_id"=>"1", "vehicle_id"=>"6"}, "commit"=>"Create Appointment"}
-  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
-  ↳ app/controllers/appointments_controller.rb:32
-  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/appointments_controller.rb:32
-  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/controllers/appointments_controller.rb:32
-  [1m[36mAppointment Create (1.0ms)[0m  [1m[32mINSERT INTO "appointments" ("date", "location", "odometer", "mechanic_id", "vehicle_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2019-02-11 21:31:00"], ["location", "nyc"], ["odometer", 70000], ["mechanic_id", 1], ["vehicle_id", 6], ["created_at", "2019-02-11 21:33:18.559188"], ["updated_at", "2019-02-11 21:33:18.559188"]]
-  ↳ app/controllers/appointments_controller.rb:32
-  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
-  ↳ app/controllers/appointments_controller.rb:32
-Redirected to http://localhost:3000/appointments/1
-Completed 302 Found in 95033ms (ActiveRecord: 5.1ms)
-
-
-Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:33:18 -0500
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:59:41 -0500
 Processing by AppointmentsController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/controllers/appointments_controller.rb:69
   Rendering appointments/show.html.erb within layouts/application
-  Rendered appointments/show.html.erb within layouts/application (1.0ms)
-Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 0.2ms)
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Mechanic Load (0.0ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:59:42 -0500
+=======
+  Rendered appointments/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/payments" for 127.0.0.1 at 2019-02-11 16:16:26 -0500
+Processing by PaymentsController#index as HTML
+  Rendering payments/index.html.erb within layouts/application
+  [1m[36mPayment Load (0.2ms)[0m  [1m[34mSELECT "payments".* FROM "payments"[0m
+  ↳ app/views/payments/index.html.erb:19
+  Rendered payments/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/appointments/" for 127.0.0.1 at 2019-02-11 16:33:23 -0500
@@ -5184,213 +5287,6 @@ Processing by AppointmentsController#index as HTML
   Rendering appointments/index.html.erb within layouts/application
   [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
   ↳ app/views/appointments/index.html.erb:18
-<<<<<<< HEAD
-  Rendered appointments/index.html.erb within layouts/application (1.4ms)
-Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/payments" for 127.0.0.1 at 2019-02-11 16:21:31 -0500
-Processing by PaymentsController#index as HTML
-  Rendering payments/index.html.erb within layouts/application
-  [1m[36mPayment Load (0.2ms)[0m  [1m[34mSELECT "payments".* FROM "payments"[0m
-  ↳ app/views/payments/index.html.erb:19
-  Rendered payments/index.html.erb within layouts/application (1.4ms)
-Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:24:30 -0500
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:10
-  Rendered mechanics/show.html.erb within layouts/application (1.7ms)
-Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/appointments/new" for 127.0.0.1 at 2019-02-11 16:33:55 -0500
-Processing by AppointmentsController#new as HTML
-  Rendering appointments/new.html.erb within layouts/application
-  Rendered appointments/_form.html.erb (21.0ms)
-  Rendered appointments/new.html.erb within layouts/application (25.6ms)
-Completed 200 OK in 70ms (Views: 59.0ms | ActiveRecord: 0.4ms)
-
-
-Started POST "/appointments" for 127.0.0.1 at 2019-02-11 16:34:06 -0500
-Processing by AppointmentsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Vr1c+UTpwFXUtt73rsCeWF7KUpNrRq7+tFvbDdubGkZDLsBMy1OeenMjohxV0VBb+577RsRmmq6VWKInTEGQQ==", "appointment"=>{"date(1i)"=>"2019", "date(2i)"=>"2", "date(3i)"=>"11", "date(4i)"=>"21", "date(5i)"=>"33", "location"=>"NYC", "odometer"=>"100000", "mechanic_id"=>"1", "vehicle_id"=>"2"}, "commit"=>"Create Appointment"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ app/controllers/appointments_controller.rb:30
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/appointments_controller.rb:30
-  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/controllers/appointments_controller.rb:30
-  [1m[36mAppointment Create (0.6ms)[0m  [1m[32mINSERT INTO "appointments" ("date", "location", "odometer", "mechanic_id", "vehicle_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2019-02-11 21:33:00"], ["location", "NYC"], ["odometer", 100000], ["mechanic_id", 1], ["vehicle_id", 2], ["created_at", "2019-02-11 21:34:06.427087"], ["updated_at", "2019-02-11 21:34:06.427087"]]
-  ↳ app/controllers/appointments_controller.rb:30
-  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
-  ↳ app/controllers/appointments_controller.rb:30
-Redirected to http://localhost:3000/appointments/1
-Completed 302 Found in 17ms (ActiveRecord: 2.2ms)
-
-
-Started GET "/appointments/1" for 127.0.0.1 at 2019-02-11 16:34:06 -0500
-Processing by AppointmentsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/appointments_controller.rb:67
-  Rendering appointments/show.html.erb within layouts/application
-  Rendered appointments/show.html.erb within layouts/application (1.4ms)
-Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/mechanics" for 127.0.0.1 at 2019-02-11 16:34:10 -0500
-Processing by MechanicsController#index as HTML
-  Rendering mechanics/index.html.erb within layouts/application
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT "mechanics".* FROM "mechanics"[0m
-  ↳ app/views/mechanics/index.html.erb:17
-  Rendered mechanics/index.html.erb within layouts/application (2.0ms)
-Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:34:14 -0500
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:10
-  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:14
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:15
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:16
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:17
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:18
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:19
-  Rendered mechanics/show.html.erb within layouts/application (7.1ms)
-Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:36:44 -0500
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/EliCleveland/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:10
-  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:14
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:15
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:16
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:17
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:18
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:19
-  Rendered mechanics/show.html.erb within layouts/application (38.7ms)
-Completed 200 OK in 310ms (Views: 280.8ms | ActiveRecord: 2.3ms)
-
-
-Started GET "/mechanics/" for 127.0.0.1 at 2019-02-11 16:36:48 -0500
-Processing by MechanicsController#index as HTML
-  Rendering mechanics/index.html.erb within layouts/application
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT "mechanics".* FROM "mechanics"[0m
-  ↳ app/views/mechanics/index.html.erb:17
-  Rendered mechanics/index.html.erb within layouts/application (2.1ms)
-Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:36:55 -0500
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:10
-  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:14
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:15
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:16
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:17
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:18
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:19
-  Rendered mechanics/show.html.erb within layouts/application (7.0ms)
-Completed 200 OK in 50ms (Views: 44.4ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:37:12 -0500
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:10
-  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:14
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:15
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:16
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:17
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:18
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:19
-  Rendered mechanics/show.html.erb within layouts/application (5.0ms)
-Completed 200 OK in 58ms (Views: 54.3ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:37:15 -0500
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:10
-  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:14
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:15
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:16
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:17
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:18
-  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/mechanics/show.html.erb:19
-  Rendered mechanics/show.html.erb within layouts/application (5.5ms)
-Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-11 16:37:38 -0500
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:67
-  Rendering mechanics/show.html.erb within layouts/application
   [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
   ↳ app/views/mechanics/show.html.erb:10
   [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
@@ -5711,6 +5607,7 @@ Processing by MechanicsController#show as HTML
   ↳ app/views/mechanics/show.html.erb:30
   Rendered mechanics/show.html.erb within layouts/application (16.7ms)
 Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+<<<<<<< HEAD
 =======
   Rendered appointments/index.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.2ms)
@@ -5790,7 +5687,6 @@ Processing by AppointmentsController#show as HTML
   ↳ app/views/appointments/show.html.erb:26
   Rendered appointments/show.html.erb within layouts/application (6.0ms)
 Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 1.3ms)
->>>>>>> 6ac2c766baaf4459ea794a73a66baf09afb8c33e
 
 
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -5940,7 +5836,7 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"mechanics"}, missing required keys: [:id]):
     22:         <td><%= appointment.odometer %></td>
     23:         <td><%= appointment.mechanic_id %></td>
@@ -5949,7 +5845,7 @@ ActionView::Template::Error (No route matches {:action=>"show", :controller=>"me
     26:         <td><%= link_to 'Show', appointment %></td>
     27:         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
     28:         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  
+
 app/views/appointments/index.html.erb:25:in `block in _app_views_appointments_index_html_erb___1448999772873356268_70243728845240'
 app/views/appointments/index.html.erb:18:in `_app_views_appointments_index_html_erb___1448999772873356268_70243728845240'
 Started GET "/vehicles" for 127.0.0.1 at 2019-02-11 16:51:28 -0500
@@ -6016,5 +5912,8 @@ Processing by PaymentsController#index as HTML
   ↳ app/views/payments/index.html.erb:19
   Rendered payments/index.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+=======
+>>>>>>> origin/Zev
 
 
+>>>>>>> origin/Eli_too

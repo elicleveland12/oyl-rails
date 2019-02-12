@@ -25,7 +25,6 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-    byebug
     @appointment = Appointment.new(appointment_params)
 
     respond_to do |format|
@@ -71,6 +70,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:date, :location, :odometer, :mechanic_id, :vehicle_id)
+      params.require(:appointment).permit(:date, :location, :odometer, :vehicle_id)
     end
 end
