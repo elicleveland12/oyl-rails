@@ -22074,3 +22074,485 @@ Processing by PaymentsController#show as HTML
 Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 0.6ms)
 
 
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 16:59:25 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2Xsejrc4P3jQm3NWsVz4Z7HGVPd4cj2sKRDbO5w8h3Y5J2wLgrlxQ/glJZ4+zQ+mgwPHMEVWAVMKrIjNrEOvmQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 16:59:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mechanics/new" for 127.0.0.1 at 2019-02-13 17:02:55 -0500
+Processing by MechanicsController#new as HTML
+  Rendering mechanics/new.html.erb within layouts/application
+  Rendered mechanics/_form.html.erb (5.9ms)
+  Rendered mechanics/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 87ms (Views: 57.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/mechanics" for 127.0.0.1 at 2019-02-13 17:03:09 -0500
+Processing by MechanicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WERn8XjvK8l5EtbbTs2udLqIr46yfliVpzyvhxK32ha35dK6A+czBFrU06dSsSpp0O8borV7fQ1ch0DDOoHUZQ==", "mechanic"=>{"name"=>"Zev", "experience"=>"21", "locaiton"=>"Boro Park", "range"=>"1", "username"=>"Zev", "password"=>"[FILTERED]"}, "commit"=>"Create Mechanic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mechanics_controller.rb:33
+  [1m[36mMechanic Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:33
+  [1m[36mMechanic Create (0.4ms)[0m  [1m[32mINSERT INTO "mechanics" ("name", "experience", "locaiton", "range", "created_at", "updated_at", "password", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Zev"], ["experience", 21], ["locaiton", "Boro Park"], ["range", 1], ["created_at", "2019-02-13 22:03:09.564667"], ["updated_at", "2019-02-13 22:03:09.564667"], ["password", "pass"], ["username", "Zev"]]
+  ↳ app/controllers/mechanics_controller.rb:33
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mechanics_controller.rb:33
+Redirected to http://localhost:3000/mechanics/4
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/mechanics/4" for 127.0.0.1 at 2019-02-13 17:03:09 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 4]]
+  ↳ app/views/mechanics/show.html.erb:11
+  Rendered mechanics/show.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (3.3ms)
+Completed 200 OK in 71ms (Views: 66.5ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 17:03:11 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0YsKCw1LbQiaG7WEGova8y8/JOwMxTFNT9PhZZxnO+Bo68Iv8nGu0dcj3P+0oRP7eXRr94FPquY/u98NvFDjZQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:03:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:03:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Vku/hVwzXwi7S6NbjvgTafU8VV6Gwv8tj8OuX+0QJdsOeba6koOpW/VR/bAESlF8Z++TveRkFfGVzDRX4OYEg==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.4ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:03:19 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (3.3ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 17:05:45 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0YsKCw1LbQiaG7WEGova8y8/JOwMxTFNT9PhZZxnO+Bo68Iv8nGu0dcj3P+0oRP7eXRr94FPquY/u98NvFDjZQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:05:45 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:05:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2rWoV4ResATsmm+qxzwWf+g1T/Q359ct8depRmQUt+hj1WBze2Rz3aGiBtFpFt93vn4A77ptTIaBv5cuRCNvbQ==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `parrams' for #<SessionsController:0x007fc7f3fede00>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:06:03 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:06:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tRhEspA3C+6/ZtaAL5EkCy5nW2UxYsGdhHO855wIBRIMeIyWbw3IN/Jev/uBu+0DeCwUfrzoWjb0G4KPvD/dlw==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Completed 404 Not Found in 14ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Mechanic with 'id'={:username=>"Zev"}):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:06:20 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:06:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Uf9la6OEhv+nWoG33NQWOTQyWbJd/edlw0e7K4OrvhoJzWxUbTRwrOlA31xWZlQspuGfUT9bDbnZSCEjjl2fQ==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:06:24 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:06:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QlABws3eqso7i/KcAVpOc4m5KpNnAHYkVt6tyhQP2H37MMnmMuRpE3azm+evcId73/JliOqK7Y8mtpOiNDgA+A==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+  [1m[36mCACHE Mechanic Load (0.0ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/mechanics/4
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/mechanics/4" for 127.0.0.1 at 2019-02-13 17:06:30 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 4]]
+  ↳ app/views/mechanics/show.html.erb:11
+  Rendered mechanics/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 50ms (Views: 44.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:06:33 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:08:33 -0500
+  
+SyntaxError (/Users/zevspilman/Development/MOD2/oyl/rails-project-mode-nyc-web-career-010719/app/controllers/sessions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/sessions_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:08:38 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (28.8ms)
+Completed 200 OK in 93ms (Views: 89.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/mechanics/4" for 127.0.0.1 at 2019-02-13 17:08:43 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 4]]
+  ↳ app/views/mechanics/show.html.erb:11
+  Rendered mechanics/show.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 55ms (Views: 47.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 17:08:44 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BShyrMuiSN401C97Zgs1IUFGA8FgbfHOPj+NW3iXwKbldAAp/iMG5RxqebPpmsLgc4OQBl1JzTEdg96tSOjoSQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:08:44 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-02-13 17:08:46 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 36.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-13 17:08:52 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+du8V4zNGq0oCgkBH4LYkt6x59IBwvuov8VInhXJUW25T/9L/JL+KQuAI7y4exnL4iqDzyxAUy3WP/IUs6ATZA==", "user"=>{"username"=>"Zev", "password"=>"[FILTERED]", "image"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Zev"], ["password", "pass"], ["image", ""], ["created_at", "2019-02-13 22:08:52.348545"], ["updated_at", "2019-02-13 22:08:52.348545"]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-13 17:08:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:7
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 17:08:55 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f+ryPwUikiBYNrkAHdgzvmfqznuxL6o5T6ZpEV/7IAvGijob+hhR+RUO0Huz8vq2MaGBYDylMZI/zld5f8z4jg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:08:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:09:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VC6iycx+wNUaPUd45UPaZaETphbVSIaR5PhUe0fqYrDtTmrtM0QDDFcFLgNLaRNt91jpDVjCHTqUkGoTZ926NQ==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:18
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 118ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:09:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:09:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhacHU7EBicG8/HR5ce8KvTuZG6E0e/VyNljl8oLH6uXdlQ5sf7F/kvLmKpL7XUioqUrdQlbdH64sV3/6jzHLg==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:18
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 119ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:09:21 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (3.5ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:09:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/n/QNnBKIox7Y8RMEO+LSA9ZliVY/3lyK4fH6ExaxX+mTdkJvvrU3zV5mqeaXcldnYpQxjpZk64xiF3gQazkA==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-02-13 17:09:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:7
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 17:09:45 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iaSinF863yZDQ0FU55EbQT1AxOZpUam/Fdmz86jPt+YwxGq4oAAc/w57KC9Ju9JJawuL/eTbMhRlsY2biPhvYw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:09:45 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:11:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:11:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6SYAZ+GzWQpXyB8srhGd2Idcb0Q5iHTZmhz1eu26QAlQRshDHoma0xrwdlcAO1TQ0RcgX7QC73LqdMsSzY2YjA==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 126ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:11:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:11:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MaXYFLNOcsDtYOChKHKKp+Qgpgb9ciVuZxrEMAdnSOaIxRAwTHSxGaBYidqGWEOvsmvpHXD4vsUXcvpYJ1CQYw==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:11:31 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:11:39 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:12:10 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:12:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSTHmwfWvkwkjROu0BZdWflOxBzhFxr3v5BSZVEaAo34RA+/+Ox9lWm1etV+PJRRrwWLB2ydgVzP+GwNcS3aCA==", "session"=>{"username"=>"Zev", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Zev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:12:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 17:12:20 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
