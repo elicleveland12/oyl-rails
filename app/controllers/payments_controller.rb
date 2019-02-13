@@ -22,6 +22,7 @@ class PaymentsController < ApplicationController
 
   # GET /payments/1/edit
   def edit
+    @user_id = session[:user_id]
     @mechanic = Mechanic.find_by(id: @payment.mechanic.id).name
   end
 
