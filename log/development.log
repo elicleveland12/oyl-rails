@@ -22556,3 +22556,65 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/" for 127.0.0.1 at 2019-02-13 17:20:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2eKf/O+ihVDeFN3gSglYdb1ZpQskIyCWOquHB4lNqnhgglfYEJhGiZMstJvkI5F96xLqEKmpuz1Kw7lvqXpy/Q==", "session"=>{"username"=>"Bob", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.4ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Bob"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+  [1m[36mCACHE Mechanic Load (0.0ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Bob"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/mechanics/2
+Completed 302 Found in 25ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/mechanics/2" for 127.0.0.1 at 2019-02-13 17:20:30 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 2]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:12
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:21
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:23
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:25
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:27
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:29
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:31
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:34
+  Rendered mechanics/show.html.erb within layouts/application (34.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/payments" for 127.0.0.1 at 2019-02-13 17:20:50 -0500
+Processing by PaymentsController#index as HTML
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:13
+  Rendering payments/index.html.erb within layouts/application
+  [1m[36mPayment Load (0.2ms)[0m  [1m[34mSELECT "payments".* FROM "payments" WHERE "payments"."mechanic_id" = ?[0m  [["mechanic_id", 2]]
+  ↳ app/views/payments/index.html.erb:45
+  Rendered payments/index.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  [1m[36mCACHE Mechanic Load (0.0ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_footer.html.erb:5
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 56ms (Views: 48.5ms | ActiveRecord: 1.0ms)
+
+
