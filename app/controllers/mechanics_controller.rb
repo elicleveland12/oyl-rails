@@ -12,7 +12,7 @@ class MechanicsController < ApplicationController
   # GET /mechanics/1.json
   def show
     #session[:mechanic_id] = @mechanic.id
-    byebug
+
   end
 
   # GET /mechanics/new
