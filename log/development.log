@@ -10848,7 +10848,6 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/controllers/users_controller.rb:70
   Rendering users/show.html.erb within layouts/application
-<<<<<<< Updated upstream
   [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
   ↳ app/views/users/show.html.erb:21
   Rendered users/show.html.erb within layouts/application (17.2ms)
@@ -10879,68 +10878,11 @@ Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
 
 
 Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:10:25 -0500
-=======
-  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
-  ↳ app/views/users/show.html.erb:21
-  Rendered users/show.html.erb within layouts/application (32.7ms)
-Completed 200 OK in 87ms (Views: 82.3ms | ActiveRecord: 1.1ms)
-
-
-Started GET "/routes" for 127.0.0.1 at 2019-02-13 09:08:19 -0500
-
-ActionController::RoutingError (No route matches [GET] "/routes"):
-
-actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/method_override.rb:22:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.2) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2019-02-13 09:17:39 -0500
-Processing by SessionsController#new as HTML
-  Rendering sessions/new.erb within layouts/application
-  Rendered sessions/new.erb within layouts/application (1.7ms)
-Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/" for 127.0.0.1 at 2019-02-13 09:17:43 -0500
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bGNT4CFb9uSp+8n3dEE+mhUftI1tzYBRJGRq+vqADwiANR2S92UfnBdlnATbrXmiG4rmKjtxAIBk4GceUN9lIA==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
-  ↳ app/controllers/sessions_controller.rb:22
-Redirected to http://localhost:3000/users/2
-Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
-
-
-Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:17:43 -0500
->>>>>>> Stashed changes
 Processing by UsersController#show as HTML
   Parameters: {"id"=>"2"}
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/controllers/users_controller.rb:70
   Rendering users/show.html.erb within layouts/application
-<<<<<<< Updated upstream
   [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
   ↳ app/views/users/show.html.erb:21
   Rendered users/show.html.erb within layouts/application (3.2ms)
@@ -11219,46 +11161,6 @@ Processing by MechanicsController#show as HTML
   [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
   ↳ app/views/mechanics/show.html.erb:11
   [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-=======
-  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
-  ↳ app/views/users/show.html.erb:21
-  Rendered users/show.html.erb within layouts/application (3.6ms)
-Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.7ms)
-
-
-Started GET "/payments/new" for 127.0.0.1 at 2019-02-13 09:55:11 -0500
-Processing by PaymentsController#new as HTML
-Redirected to http://localhost:3000/
-Filter chain halted as :mechanic_authorized rendered or redirected
-Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2019-02-13 09:55:11 -0500
-Processing by SessionsController#new as HTML
-  Rendering sessions/new.erb within layouts/application
-  Rendered sessions/new.erb within layouts/application (1.7ms)
-Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/" for 127.0.0.1 at 2019-02-13 09:55:19 -0500
-Processing by SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8TGCNMrWLvLTJOTXUQjf5OnXj5fJhgi0NgEN5GVgc/wdZ8xGHOjHim26sST+5Jjc50LdMJ86iGV2hQAAzz8Z1A==", "session"=>{"username"=>"Mike", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Mike"], ["LIMIT", 1]]
-  ↳ app/controllers/sessions_controller.rb:14
-Redirected to http://localhost:3000/mechanics/1
-Completed 302 Found in 17ms (ActiveRecord: 1.0ms)
-
-
-Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 09:55:19 -0500
-Processing by MechanicsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/mechanics_controller.rb:70
-  Rendering mechanics/show.html.erb within layouts/application
-  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
-  ↳ app/views/mechanics/show.html.erb:11
-  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
->>>>>>> Stashed changes
   ↳ app/views/mechanics/show.html.erb:20
   [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/mechanics/show.html.erb:22
@@ -11270,7 +11172,6 @@ Processing by MechanicsController#show as HTML
   ↳ app/views/mechanics/show.html.erb:28
   [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/mechanics/show.html.erb:30
-<<<<<<< Updated upstream
   Rendered mechanics/show.html.erb within layouts/application (12.2ms)
 Completed 200 OK in 2451ms (Views: 66.7ms | ActiveRecord: 1.2ms)
 
@@ -11287,13 +11188,6 @@ Completed 200 OK in 2473ms (Views: 53.6ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/payments" for 127.0.0.1 at 2019-02-13 10:17:02 -0500
-=======
-  Rendered mechanics/show.html.erb within layouts/application (23.2ms)
-Completed 200 OK in 60ms (Views: 54.0ms | ActiveRecord: 1.9ms)
-
-
-Started GET "/payments" for 127.0.0.1 at 2019-02-13 09:55:22 -0500
->>>>>>> Stashed changes
 
 ActionController::RoutingError (No route matches [GET] "/payments"):
 
@@ -11324,7 +11218,6 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-<<<<<<< Updated upstream
 Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 10:17:05 -0500
 Processing by SessionsController#destroy as HTML
   Parameters: {"authenticity_token"=>"Aw9y88yhXBiwmOWOBbxOvXBjBL29jlAtdkYsMe7t83CCAzMmYcR1UK5Cy12CSfMvk+5ndzlnRmZLXWSu/TihZQ=="}
@@ -11339,26 +11232,6 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
 
 
-=======
-Started GET "/payments/new" for 127.0.0.1 at 2019-02-13 09:55:31 -0500
-Processing by PaymentsController#new as HTML
-  Rendering payments/new.html.erb within layouts/application
-  Rendered payments/_form.html.erb (4.6ms)
-  Rendered payments/new.html.erb within layouts/application (8.3ms)
-Completed 200 OK in 50ms (Views: 37.1ms | ActiveRecord: 0.6ms)
-
-
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  ↳ bin/rails:9
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
->>>>>>> Stashed changes
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
 Migrating to AddAmountToPayments (20190213152238)
@@ -11417,9 +11290,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
 
 
-  
+
 NoMethodError (undefined method `id' for nil:NilClass):
-  
+
 app/controllers/sessions_controller.rb:21:in `create'
 Started POST "/" for 127.0.0.1 at 2019-02-13 10:38:26 -0500
 Processing by SessionsController#create as HTML
@@ -11455,9 +11328,9 @@ Completed 200 OK in 5500ms (Views: 70.6ms | ActiveRecord: 1.7ms)
 
 
 Started GET "/payments" for 127.0.0.1 at 2019-02-13 10:38:34 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/payments"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -11693,9 +11566,9 @@ Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/users" for 127.0.0.1 at 2019-02-13 10:46:27 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/users"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -11801,9 +11674,9 @@ Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/payments" for 127.0.0.1 at 2019-02-13 10:51:17 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/payments"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -11957,9 +11830,9 @@ Completed 200 OK in 65ms (Views: 49.3ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/payments" for 127.0.0.1 at 2019-02-13 10:55:14 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/payments"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -11988,9 +11861,9 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/users" for 127.0.0.1 at 2019-02-13 10:55:17 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/users"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -12060,9 +11933,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=some link):
-  
+
 app/controllers/users_controller.rb:70:in `set_user'
 Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:55:42 -0500
 Processing by UsersController#show as HTML
@@ -12084,9 +11957,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
-  
+
 app/controllers/users_controller.rb:70:in `set_user'
 Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:55:47 -0500
 Processing by UsersController#show as HTML
@@ -12184,9 +12057,9 @@ Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.1ms)
 
 
 Started GET "/mechanics" for 127.0.0.1 at 2019-02-13 11:02:41 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/mechanics"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -12274,9 +12147,9 @@ Processing by PaymentsController#show as HTML
 Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Payment with 'id'=3):
-  
+
 app/controllers/payments_controller.rb:71:in `set_payment'
 Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 11:03:18 -0500
 Processing by MechanicsController#show as HTML
@@ -12497,10 +12370,10 @@ Processing by PaymentsController#show as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
 
 
-  
+
 SyntaxError (/Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/payments/show.html.erb:54: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/payments/show.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/payments/show.html.erb:54: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/payments/show.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/payments/2" for 127.0.0.1 at 2019-02-13 11:07:48 -0500
@@ -12513,10 +12386,10 @@ Processing by PaymentsController#show as HTML
 Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
 
 
-  
+
 SyntaxError (/Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/payments/show.html.erb:54: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/payments/show.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/payments/show.html.erb:54: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/payments/show.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/payments/3" for 127.0.0.1 at 2019-02-13 11:08:01 -0500
@@ -12638,14 +12511,14 @@ Processing by PaymentsController#show as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `id' for nil:NilClass):
     50: </p>
-    51: 
-    52: 
+    51:
+    52:
     53: <%= link_to 'Mechanic', mechanic_path(@mechanic.id) %> |
     54: <%= link_to 'User', user_path(@user.id) %>
-  
+
 app/views/payments/show.html.erb:53:in `_app_views_payments_show_html_erb__4084635059311455435_70318210140060'
 Started POST "/payments" for 127.0.0.1 at 2019-02-13 11:11:41 -0500
 Processing by PaymentsController#create as HTML
@@ -12682,9 +12555,9 @@ Processing by MechanicsController#show as HTML
 Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Mechanic with 'id'=5):
-  
+
 app/controllers/mechanics_controller.rb:71:in `set_mechanic'
 Started GET "/payments/5" for 127.0.0.1 at 2019-02-13 11:12:05 -0500
 Processing by PaymentsController#show as HTML
@@ -12902,10 +12775,10 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::OYL):
     1: <%= OYL %>
-  
+
 app/views/layouts/_header.html.erb:1:in `_app_views_layouts__header_html_erb___2458292053507519846_70318269456120'
 app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___4513539743335265017_70318293027300'
 Started GET "/users/2" for 127.0.0.1 at 2019-02-13 11:20:06 -0500
@@ -12922,14 +12795,14 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `mechanic_logged_in?' for #<#<Class:0x007fe87c8031c8>:0x007fe87c8011c0>
 Did you mean?  mechanic_url):
     1: <% if mechanic_logged_in? %>
     2: <%= link_to Mechanic.find_by(id: session[:mechanic_id]).name, mechanic_path %>
     3: <% elsif user_logged_in? %>
     4: <%= link_to User.find_by(id: session[:user_id]).name, user_path %>
-  
+
 app/views/layouts/_footer.html.erb:1:in `_app_views_layouts__footer_html_erb___845110332593685558_70318249095380'
 app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4513539743335265017_70318244258940'
 Started GET "/users/2" for 127.0.0.1 at 2019-02-13 11:20:36 -0500
@@ -12948,14 +12821,14 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for #<User:0x007fe879621ee8>):
     1: <% if session[:mechanic_id] %>
     2: <%= link_to Mechanic.find_by(id: session[:mechanic_id]).name, mechanic_path %>
     3: <% elsif session[:user_id] %>
     4: <%= link_to User.find_by(id: session[:user_id]).name, user_path %>
     5: <% end %>
-  
+
 app/views/layouts/_footer.html.erb:4:in `_app_views_layouts__footer_html_erb___845110332593685558_70318222813660'
 app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4513539743335265017_70318268865780'
 Started GET "/users/2" for 127.0.0.1 at 2019-02-13 11:20:48 -0500
@@ -13032,9 +12905,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=5):
-  
+
 app/controllers/users_controller.rb:70:in `set_user'
 Started GET "/users/5" for 127.0.0.1 at 2019-02-13 11:22:21 -0500
 Processing by UsersController#show as HTML
@@ -13044,9 +12917,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=5):
-  
+
 app/controllers/users_controller.rb:70:in `set_user'
 Started GET "/payments/5" for 127.0.0.1 at 2019-02-13 11:22:31 -0500
 Processing by PaymentsController#show as HTML
@@ -13446,9 +13319,9 @@ Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/lib/graphics/logo.002.jpeg" for 127.0.0.1 at 2019-02-13 11:33:05 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/lib/graphics/logo.002.jpeg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -13486,9 +13359,9 @@ Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/lib/graphics/logo.002" for 127.0.0.1 at 2019-02-13 11:33:21 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/lib/graphics/logo.002"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -13526,9 +13399,9 @@ Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/lib/graphics/logo.002" for 127.0.0.1 at 2019-02-13 11:33:56 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/lib/graphics/logo.002"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -13566,9 +13439,9 @@ Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/graphics/logo.002" for 127.0.0.1 at 2019-02-13 11:34:26 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/graphics/logo.002"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -13606,9 +13479,9 @@ Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/lib/graphics/logo.002" for 127.0.0.1 at 2019-02-13 11:34:36 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/lib/graphics/logo.002"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -13646,9 +13519,9 @@ Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/logo.002.jpeg" for 127.0.0.1 at 2019-02-13 11:34:48 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/logo.002.jpeg"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -13778,17 +13651,17 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 4001ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0x007fe877fa3b30>:0x007fe8791a0270>
 Did you mean?  @appointments):
     4:   <style>
-    5: 
+    5:
     6:     tbody {
     7:       <% if appointment.mechanic_id %>
     8:       color: green;
     9:       <% end %>
    10:     }
-  
+
 app/views/appointments/index.html.erb:7:in `_app_views_appointments_index_html_erb__735022097173351364_70318217341700'
 Started GET "/appointments" for 127.0.0.1 at 2019-02-13 11:46:19 -0500
 Processing by AppointmentsController#index as HTML
@@ -13813,16 +13686,16 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 5017ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0x007fe877fa3b30>:0x007fe87edbd0d0>
 Did you mean?  @appointments):
     1: <p id="notice"><%= notice %></p>
-    2: 
+    2:
     3: <% if appointment.mechanic_id %>
     4:   <head>
     5:     <style>
-    6: 
-  
+    6:
+
 app/views/appointments/index.html.erb:3:in `_app_views_appointments_index_html_erb__735022097173351364_70318268738940'
 Started GET "/appointments" for 127.0.0.1 at 2019-02-13 11:46:56 -0500
 Processing by AppointmentsController#index as HTML
@@ -13847,16 +13720,16 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 3150ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0x007fe877fa3b30>:0x007fe881881050>
 Did you mean?  @appointments):
     1: <p id="notice"><%= notice %></p>
-    2: 
+    2:
     3: <% if appointment.mechanic_id %>
     4:   <head>
     5:     <style>
-    6: 
-  
+    6:
+
 app/views/appointments/index.html.erb:3:in `_app_views_appointments_index_html_erb__735022097173351364_70318291160340'
 Started GET "/appointments" for 127.0.0.1 at 2019-02-13 11:47:38 -0500
 Processing by AppointmentsController#index as HTML
@@ -13881,16 +13754,16 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 2714ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0x007fe877fa3b30>:0x007fe881be20c8>
 Did you mean?  @appointments):
     1: <p id="notice"><%= notice %></p>
-    2: 
+    2:
     3: <% if appointment.mechanic_id %>
     4:   <head>
     5:     <style>
-    6: 
-  
+    6:
+
 app/views/appointments/index.html.erb:3:in `_app_views_appointments_index_html_erb__735022097173351364_70318292931940'
 Started GET "/appointments" for 127.0.0.1 at 2019-02-13 11:48:13 -0500
 Processing by AppointmentsController#index as HTML
@@ -13915,16 +13788,16 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 2551ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `appointment' for #<#<Class:0x007fe877fa3b30>:0x007fe87c82aef8>
 Did you mean?  @appointments):
     1: <p id="notice"><%= notice %></p>
-    2: 
+    2:
     3: <% if appointment.mechanic_id %>
     4:   <head>
     5:     <style>
-    6: 
-  
+    6:
+
 app/views/appointments/index.html.erb:3:in `_app_views_appointments_index_html_erb__735022097173351364_70318249041080'
 Started GET "/appointments" for 127.0.0.1 at 2019-02-13 11:48:37 -0500
 Processing by AppointmentsController#index as HTML
@@ -14207,19 +14080,19 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:27: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
 ...=( if appointment.mechanic_id );@output_buffer.safe_append='
 ...                               ^
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;         end 
+'.freeze;         end
                      ^
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;     end 
+'.freeze;     end
                  ^
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:48: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:50: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/appointments/index.html.erb:27: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
 app/views/appointments/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
 app/views/appointments/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
@@ -14249,7 +14122,7 @@ Processing by AppointmentsController#index as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:28: syntax error, unexpected '<'
           <head>
            ^
@@ -14261,11 +14134,11 @@ SyntaxError (/Users/EliCleveland/Development/code/projects/mod-2-project/rails-p
              ^
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:35: unknown regexp options - had
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:36: syntax error, unexpected keyword_end
-        end 
+        end
            ^
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:48: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/appointments/index.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/appointments/index.html.erb:28: syntax error, unexpected '<'
 app/views/appointments/index.html.erb:32: syntax error, unexpected ':', expecting '}'
 app/views/appointments/index.html.erb:34: syntax error, unexpected '<', expecting keyword_end
@@ -14922,5 +14795,3 @@ Processing by MechanicsController#show as HTML
   ↳ app/views/layouts/_footer.html.erb:5
   Rendered layouts/_footer.html.erb (1.0ms)
 Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.4ms)
-
-
