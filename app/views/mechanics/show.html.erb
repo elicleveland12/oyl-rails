@@ -37,9 +37,10 @@
 </p>
 
 <p>
-  <%= button_to "Invoices", payments_path, :method => "get" %>
+  <%= button_to "Invoices", new_payment_path, :method => "get" %>
 </p>
 
 
 <%= link_to 'Edit', edit_mechanic_path(@mechanic) %> |
-<%= link_to 'Back', mechanics_path %>
+
+<%= button_to "LOGOUT", logout_path, :method => "delete" %>

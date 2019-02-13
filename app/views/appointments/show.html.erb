@@ -16,16 +16,10 @@
 </p>
 
 <p>
-  <strong>Mechanic:</strong>
-  <%= @appointment.mechanic_id %>
-</p>
-
-<p>
   <strong>Vehicle:</strong>
-  Make:<%= Vehicle.find(@appointment.vehicle_id).make %>,
-  Model:<%= Vehicle.find(@appointment.vehicle_id).model %>
+  Make: <%= link_to Vehicle.find(@appointment.vehicle_id).model, Vehicle.find(@appointment.vehicle_id) %>
 
 </p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+<%= link_to 'Back', @appointment.vehicle.user %>

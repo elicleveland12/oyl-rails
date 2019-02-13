@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :user_authorized, only: [:index,:edit, :show]
+  skip_before_action :mechanic_authorized, only: [:new, :create, :show, :destroy]
   # GET /appointments
   # GET /appointments.json
   def index
@@ -10,24 +11,26 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    byebug
   end
 
   # GET /appointments/new
   def new
     @appointment = Appointment.new
-    @vehicle_id = session[:vehicle_id].to_i
+    @vehicle_id = flash[:vehicle_id]
   end
 
   # GET /appointments/1/edit
   def edit
+    @appointment = Appointment.find(params[:id])
+    @vehicle_id = @appointment.vehicle.id
   end
 
   # POST /appointments
   # POST /appointments.json
   def create
-    byebug
     @appointment = Appointment.new(appointment_params)
-
+    byebug
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
@@ -42,6 +45,7 @@ class AppointmentsController < ApplicationController
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
   def update
+    byebug
     respond_to do |format|
       if @appointment.update(appointment_params)
         format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
@@ -71,6 +75,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:date, :location, :odometer, :mechanic_id, :vehicle_id)
+      params.require(:appointment).permit(:date, :location, :odometer, :vehicle_id, :mechanic_id)
     end
 end

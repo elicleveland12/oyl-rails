@@ -1,22 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <img src="<%= @user.image %>">
+</p>
+
+<p>
   <strong>Username:</strong>
   <%= @user.username %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @user.image %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> | 
+<%= link_to 'logout',logout_path, method: :delete %>
 
 <p>
   <strong>Vehicles:</strong>
@@ -25,4 +22,4 @@
   <% end %>
 </p>
 
- <%= button_to "Add A Vehicle", new_vehicle_path, :method => "get" %>
+<%= button_to "Add A Vehicle", new_vehicle_path, :method => "get" %>

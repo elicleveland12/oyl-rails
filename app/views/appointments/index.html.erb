@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <h1>Appointments</h1>
 
 <table>
@@ -21,8 +23,17 @@
         <td><%= appointment.location %></td>
         <td><%= appointment.odometer %></td>
         <td><%= appointment.mechanic_id %></td>
-        <td><%= appointment.vehicle_id %></td>
-        <td><%= link_to 'Accept Job', mechanic_path %></td>
+        <td><%= Vehicle.find(appointment.vehicle_id).model %></td>
+        <% if appointment.mechanic_id %>
+          <head>
+            <style>
+
+              tbody {
+                color: green;
+              }
+            </style>
+          </head>
+        <% end %>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,5 +43,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Appointment', new_appointment_path %>

@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :location %>
-    <%= form.text_field :location %>
+    <%= form.text_field :location, placeholder: "street, city, state, zip" %>
   </div>
 
   <div class="field">
@@ -26,13 +26,13 @@
     <%= form.number_field :odometer %>
   </div>
 
-  <div class="field">
-    <%= form.label :mechanic_id %>
-    <%= form.number_field :mechanic_id %>
-  </div>
 
   <div class="field" type="hidden">
     <%= form.hidden_field :vehicle_id, value: @vehicle_id %>
+  </div>
+
+  <div class="field" type="hidden">
+    <%= form.hidden_field :mechanic_id, value: session[:mechanic_id] %>
   </div>
 
   <div class="actions">

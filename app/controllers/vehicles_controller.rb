@@ -1,5 +1,7 @@
 class VehiclesController < ApplicationController
   before_action :set_vehicle, only: [:show, :edit, :update, :destroy]
+  skip_before_action :mechanic_authorized
+  skip_before_action :user_authorized, only: [:new, :create, :show]
 
   # GET /vehicles
   # GET /vehicles.json
@@ -10,7 +12,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
-    session[:vehicle_id] = params[:id]
+    flash[:vehicle_id] = params[:id]
   end
 
   # GET /vehicles/new

@@ -1,0 +1,5 @@
+<h3><img src="http://oyl.io/wp-content/uploads/2017/02/cropped-cropped-cropped-cropped-oyl-logo-main.001.jpeg" alt="oyl logo" style="width:40px;height:40px;">
+  <% if session[:mechanic_id] || session[:user_id] %>
+  <%= button_to "LOGOUT", logout_path, :method => "delete" %>
+  <% end %>
+</h3>
