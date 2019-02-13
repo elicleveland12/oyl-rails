@@ -30,5 +30,4 @@ helper_method :current_mechanic
   end
 
 
-
 end
