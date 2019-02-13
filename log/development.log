@@ -16678,9 +16678,9 @@ Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.6ms)
 
 
 Started POST "/appointments/2" for 127.0.0.1 at 2019-02-13 14:42:44 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/appointments/2"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -23838,9 +23838,9 @@ Completed 200 OK in 57ms (Views: 51.8ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/mechanics/" for 127.0.0.1 at 2019-02-13 17:26:36 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/mechanics"):
-  
+
 actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -24213,9 +24213,9 @@ Processing by MechanicsController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Mechanic with 'id'=3):
-  
+
 app/controllers/mechanics_controller.rb:71:in `set_mechanic'
 Started GET "/mechanics/2" for 127.0.0.1 at 2019-02-13 17:28:23 -0500
 Processing by MechanicsController#show as HTML
@@ -24406,11 +24406,11 @@ Processing by MechanicsController#show as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
 
 
-  
+
 SyntaxError (/Users/EliCleveland/Development/code/projects/mod-2-project/rails-project-mode-nyc-web-career-010719/app/views/mechanics/show.html.erb:71: syntax error, unexpected '='
 ..._path, :method => "get", class="apps other" );@output_buffer...
 ...                               ^):
-  
+
 app/views/mechanics/show.html.erb:71: syntax error, unexpected '='
 Started GET "/mechanics/2" for 127.0.0.1 at 2019-02-13 17:30:48 -0500
 Processing by MechanicsController#show as HTML
@@ -25384,5 +25384,3 @@ Processing by MechanicsController#show as HTML
   ↳ app/views/layouts/_footer.html.erb:17
   Rendered layouts/_footer.html.erb (6.4ms)
 Completed 200 OK in 70ms (Views: 64.9ms | ActiveRecord: 1.2ms)
-
-

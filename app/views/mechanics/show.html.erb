@@ -41,9 +41,9 @@
   <br><br><strong>Accepted Appointments:</strong><br><br>
   <% counter = 1 %>
   <% @mechanic.appointments.each do |appointment| %>
-  <% counter += 1 %>
-  <button class="apps">
-    <strong class="label">Date:</strong>
+    <% flash[appointment.id] = Vehicle.find_by(id: appointment.vehicle_id).user.id %>
+    <button class=
+    <strong>Date:</strong>
     <%= appointment.date %><br>
     <strong class="label">Location:</strong>
     <%= appointment.location %><br>
@@ -60,16 +60,27 @@
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:plate] %><br>
     <strong class="label">Oil Type:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_type] %><br>
-    <strong class="label">Oil Quantity:</strong>
+    <strong>Oil Qua ntity:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_quantity] %> quarts<br>
-    </button>
+    <p>
+      <%= form_tag new_payment_path, method: :get do %>
+      <%= hidden_field_tag :id, Vehicle.find_by(id: appointment.vehicle_id).user.id %>
+      <%= submit_tag 'Make A New Invoice' %>
+      <% end %>
+
+    </p>
+
+    __________________________<br>
   <% end %>
 </div>
 
 <br><br><strong>More Options: </strong><br><br>
 <p>
-<%= button_to "Service Requests", appointments_path, :method => "get", class: "apps other" %>
+  <%= button_to "Service Requests", appointments_path, :method => "get" %>
 </p>
+
 <p>
-<%= button_to "Invoices", new_payment_path, :method => "get", class: "apps other" %>
+  <%= button_to "Invoices", payments_path, :method => "get" %>
+</p>
+
 </p><br><br>

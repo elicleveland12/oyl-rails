@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :payments, except: [:index]
+  resources :payments
   resources :users, except: [:index]
   resources :vehicles, except: [:index]
   resources :appointments
@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/', to: 'sessions#new'
   post '/', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

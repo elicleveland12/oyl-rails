@@ -11,7 +11,6 @@
     </div>
   <% end %>
 <% if session[:mechanic_id] %>
-
 <div class="field" type="hidden">
   <%= form.hidden_field :name_on_card %>
 </div>
@@ -32,9 +31,13 @@
   <%= form.hidden_field :mechanic_id, value: session[:mechanic_id] %>
 </div>
 
+  <p>The client is <%= User.find(@user).username %></p>
 <div class="field">
-  <%= form.label :user_id %>
-  <%= form.number_field :user_id %>
+  <%= form.hidden_field :user_id, value:@user %>
+</div>
+
+<div class="field">
+  $<%= form.number_field :amount %>
 </div>
 
 
@@ -62,19 +65,16 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.text_field :user_id %>
   </div>
 
   <div class="field">
-    <%= form.label :mechanic_id %>
-    <%= form.text_field :mechanic_id, value: @mechanic %>
+    <%= form.hidden_field :mechanic_id, value: @mechanic %>
   </div>
 
+  <p>Your Mechanic is <%= Mechanic.find(@mechanic).name %></p>
   <% end %>
 
-  <div class="field">
-    $<%= form.number_field :amount %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

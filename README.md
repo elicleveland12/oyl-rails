@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+Vehicle.find_by(id: appointment.vehicle_id).user.id
