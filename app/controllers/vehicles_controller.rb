@@ -1,5 +1,7 @@
 class VehiclesController < ApplicationController
   before_action :set_vehicle, only: [:show, :edit, :update, :destroy]
+  skip_before_action :mechanic_authorized
+  skip_before_action :user_authorized, only: [:new, :create, :show]
 
   # GET /vehicles
   # GET /vehicles.json
