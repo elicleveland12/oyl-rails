@@ -1,46 +1,74 @@
+<head>
+  <style>
+    .apps {
+      font-size: 18px;
+      background-color: #dddddd;
+      align: center;
+      width: 30%;
+      height: 400px;
+      padding: 25px 5px 25px 5px;
+      border: 2px solid green;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .other {
+      text-align: center;
+      padding: 0px 0px 0px 0px;
+      height: 50px;
+      width: 45%;
+    }
+    .apps:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    }
+    .logout {
+      float: right;
+    }
+    .vehicle-info {
+      color: green;
+    }
+    .label {
+      size: 20px;
+    }
+
+
+  </style>
+</head>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @mechanic.name %>
-</p>
-
-<div>
-  <strong>Accepted Appointments:</strong><br>
-  __________________________<br>
+<div class="cards">
+  <br><br><strong>Accepted Appointments:</strong><br><br>
+  <% counter = 1 %>
   <% @mechanic.appointments.each do |appointment| %>
-    <strong>Date:</strong>
+  <% counter += 1 %>
+  <button class="apps">
+    <strong class="label">Date:</strong>
     <%= appointment.date %><br>
-    <strong>Location:</strong>
+    <strong class="label">Location:</strong>
     <%= appointment.location %><br>
-    <strong>Odomenter:</strong>
+    <strong class="label">Odomenter:</strong>
     <%= appointment.odometer %><br>
-    <strong>VEHICLE INFO</strong><br>
-    <strong>Year:</strong>
+    <strong class="vehicle-info">VEHICLE INFO</strong><br>
+    <strong class="label">Year:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:year] %><br>
-    <strong>Make:</strong>
+    <strong class="label">Make:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:make] %><br>
-    <strong>Model:</strong>
+    <strong class="label">Model:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:model] %><br>
-    <strong>Plate Number:</strong>
+    <strong class="label">Plate Number:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:plate] %><br>
-    <strong>Oil Type:</strong>
+    <strong class="label">Oil Type:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_type] %><br>
-    <strong>Oil Quantity:</strong>
+    <strong class="label">Oil Quantity:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_quantity] %> quarts<br>
-    __________________________<br>
+    </button>
   <% end %>
 </div>
 
+<br><br><strong>More Options: </strong><br><br>
 <p>
-  <%= button_to "Service Requests", appointments_path, :method => "get" %>
-</p>
+<%= button_to "Service Requests", appointments_path, :method => "get", class: "apps other" %>
 
-<p>
-  <%= button_to "Invoices", new_payment_path, :method => "get" %>
-</p>
-
-
-<%= link_to 'Edit', edit_mechanic_path(@mechanic) %> |
-
-<%= button_to "LOGOUT", logout_path, :method => "delete" %>
+<%= button_to "Invoices", new_payment_path, :method => "get", class: "apps other" %>
+</p><br><br>
