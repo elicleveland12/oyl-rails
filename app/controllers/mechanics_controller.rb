@@ -11,7 +11,8 @@ class MechanicsController < ApplicationController
   # GET /mechanics/1
   # GET /mechanics/1.json
   def show
-    session[:mechanic_id] = @mechanic.id
+    #session[:mechanic_id] = @mechanic.id
+    byebug
   end
 
   # GET /mechanics/new
@@ -30,7 +31,7 @@ class MechanicsController < ApplicationController
     byebug
     respond_to do |format|
       if @mechanic.save
-        session[:mechanic_id] = @mechanic.id
+        #session[:mechanic_id] = @mechanic.id
         format.html { redirect_to @mechanic, notice: 'Mechanic was successfully created.' }
         format.json { render :show, status: :created, location: @mechanic }
       else

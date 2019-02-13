@@ -10827,3 +10827,2147 @@ Processing by MechanicsController#show as HTML
 Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:50:05 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (92.1ms)
+Completed 200 OK in 352ms (Views: 342.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-13 08:51:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/" for 127.0.0.1 at 2019-02-13 08:51:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pfNoKA2xAw66+iTX+B///uE3kGFPWlDxOPW8U6BGLQTV7CKPF5iyOK52wNPbn09AWR67ohQEA8AqMv2gwWSHlg==", "session"=>{"username"=>"Mike", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.6ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Mike"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14
+Redirected to http://localhost:3000/mechanics/1
+Completed 302 Found in 36ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 08:51:45 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:70
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.5ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 100ms (Views: 92.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-02-13 08:51:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 56ms (Views: 39.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/some%20link" for 127.0.0.1 at 2019-02-13 08:51:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"some link"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=some link):
+  
+app/controllers/users_controller.rb:70:in `set_user'
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 08:51:58 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:70
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mechanics/2" for 127.0.0.1 at 2019-02-13 08:52:11 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:70
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Mechanic with 'id'=2):
+  
+app/controllers/mechanics_controller.rb:70:in `set_mechanic'
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 08:52:14 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.6ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:70
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 33.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-02-13 08:52:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/some%20link" for 127.0.0.1 at 2019-02-13 08:52:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"some link"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=some link):
+  
+app/controllers/users_controller.rb:70:in `set_user'
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 08:52:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 08:52:50 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nOz+kU9xNzRaa5OgAt3lJDtwn/rfGPOQ+sCV+V6lXRvs87Q2VViGAk7nd6QhXVWag1m0OYRGoKHoB9QKP4f3iQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:52:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 08:55:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eoqch82DcX+3cr3YjHyS1cwU5VrO9svMEICH5q6X4csKldYg16rASaP+Wdyv/CJrdD3OmZWomP0CR8YVz7VLWQ==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 08:55:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 08:55:33 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:55:33 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 08:55:37 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:55:37 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 08:56:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 48ms (Views: 35.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 08:56:32 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 71ms (Views: 62.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 08:56:35 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:56:35 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 08:56:53 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:56:53 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-13 08:58:20 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:24
+  Rendered appointments/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 08:58:25 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:58:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 08:58:56 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 61ms (Views: 41.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 08:58:57 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:58:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 08:59:37 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 60ms (Views: 42.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 08:59:42 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:59:42 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2019-02-13 08:59:59 -0500
+Processing by AppointmentsController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 08:59:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 09:00:51 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 57ms (Views: 41.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 09:00:53 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:00:53 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:01:47 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AT8ohu09c1vo3Qz+Vdh6FCOi9F5WEaUPssanELpSIbInNIytv3s8Fn+aNWBPGMGaZArmOZ3AyXUx5vGtfpacVQ==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 21ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:01:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 09:01:53 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 09:01:55 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:01:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 09:03:00 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 73ms (Views: 54.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 09:03:01 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:72
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:03:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:03:31 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ImGQyNLry3kh+C1nRiP65Tsg23619r4Mah0veSD3quPQZeUXA265o5zwpvxLX8rkvzzWxKDJZJegGGGJgigajg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:03:31 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:03:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zCWajqhvquO8u/8kS5g7JCpWeiSKTKug5P7m6JVal2hXTZ6TsnBxvAPlGormWKKqa7SUMx+6kPc4enw+S/rq6Q==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:03:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 09:03:48 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 45ms (Views: 37.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 09:03:49 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:73
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 39277ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:04:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:04:33 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5jaBtsadqxWVifYH59eNEiRi9aK6UYfwDiDVEOhc/3UUMvRpFxjZzyiBfZzqq70ToH74GK9uXWvEJZvgSoNPGA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:04:33 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:04:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8+6Fkuc6E+ztIC2p8ESyX+hCIbBejBrMOrHi5N/ABo1ohoGP/SXIs1J+yAddhCvRqaDPp8t6IZvmNXgyAWB7DA==", "session"=>{"username"=>"Mike", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Mike"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14
+Redirected to http://localhost:3000/mechanics/1
+Completed 302 Found in 30ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 09:04:39 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:70
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 43ms (Views: 36.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-13 09:04:45 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:24
+  Rendered appointments/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 09:04:54 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:73
+  Rendering appointments/show.html.erb within layouts/application
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 09:06:08 -0500
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AppointmentsController#show as HTML
+  ↳ app/views/appointments/show.html.erb:20
+  Parameters: {"id"=>"1"}
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  ↳ app/controllers/appointments_controller.rb:73
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering appointments/show.html.erb within layouts/application
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered appointments/show.html.erb within layouts/application (6986.5ms)
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+Completed 200 OK in 80483ms (Views: 7046.1ms | ActiveRecord: 0.5ms)
+
+
+  Rendered appointments/show.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 7077ms (Views: 103.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:06:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:08:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 54ms (Views: 40.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:08:56 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G7NoiQPSNSH8EKloq7yO8vZzM9U3JhPtIkIZ+P/hoCCA22yUGc3ufkNOTMYGfBd8t5HdwqLQKLr+xoMuIUHdoQ=="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x007fabf910bd80>
+Did you mean?  pretty_print
+               pretty_inspect
+               pretty_print_cycle
+               try):
+  
+app/controllers/sessions_controller.rb:33:in `destroy'
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:09:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 67ms (Views: 43.8ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:09:09 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1qMtwUJl6inYNE/OaYId7lhXWes7Dy93DHuREfGycQ5NyyncWHoxdmdqqmDEQoRgGbW3/K75FCDQ/wvHLxIMjw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 26986ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:09:36 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.0ms)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:10:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FR+v6YhVCRQLY5CubIOo8NjhRZ19Kls4llc+M4i7+LKOd6v0kkrSS7Q9dQDBQzF+mQOriujcYG9K06TlVhuFMw==", "session"=>{"username"=>"Mike", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Mike"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14
+Redirected to http://localhost:3000/mechanics/1
+Completed 302 Found in 17ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 09:10:27 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 20234ms (Views: 71.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-13 09:11:15 -0500
+Processing by AppointmentsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :user_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:11:15 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (16.1ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-13 09:11:20 -0500
+Processing by AppointmentsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :user_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:11:20 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:11:47 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FWd/uLJ1ZU6ZN+fQsmXKgoc2m0/759BqB7dQLReEa56OD3ulqGq+ESZpAn4fpVMMxtR1WG4R6z3bM8r7ySQWHw==", "session"=>{"username"=>"Mike", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.1ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Mike"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14
+Redirected to http://localhost:3000/mechanics/1
+Completed 302 Found in 21ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 09:11:47 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.8ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 173772ms (Views: 107.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-13 09:14:43 -0500
+Processing by AppointmentsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :user_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:14:43 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:14:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdL1y3E5s2hckXqUxJHX3Sjn+qjZQVJlDWZix0U+tldauvHWayZoN+PPnzppUU5TaQUUv0y3aTLR4vgRm57L1g==", "session"=>{"username"=>"Mike", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Mike"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:14
+Redirected to http://localhost:3000/mechanics/1
+Completed 302 Found in 16ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 09:14:48 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 14459ms (Views: 76.8ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:15:06 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KJ67r5Hw9i9NRMPsEzh0OI0LR5fs+8vT99MT6sVAT++z9r+yi+8tcPIaJkK++O22zOmpgHkN8IQrV4k8G+Aybg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :user_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:15:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:15:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y7g5PkQ/p3TWEqbfqpAYx4Vjp8qIAYgykqv+Wf0tsFlQ0D0jXiB8K2lMQ3EHUIFJxIFJ3R33s2VOL2SPI43N2A==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 21ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:15:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:15:18 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IWLsjvUO96rTbO5iG3Ywj7MSPFJFFgCf6uBfBHvMJsi6CuiT7xEs9WwyC8y2tqkB8vDSRdDgO8g2ZMXSpWxbSQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 157759ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:17:56 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:18:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H1Xs32XpUPElfrovBATfoVm4LCYGmpDEzjty0euSt3GEPejCf/aLrpogX4GpxEYvGFrCMZNsq5MSv+gHNTLK8A==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 23ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:18:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 54ms (Views: 47.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:18:01 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/logout"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:20:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.4ms)
+Completed 200 OK in 73ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:20:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yek90LZ8+PoyPKlKJ9wWdyxm2Ym96BXu4wQn5g5shtpSgTnNrGMjpY1iTOSKHI/5bYQ3nigeLrk/gL0w0Mz7Ww==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 16ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:20:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 54ms (Views: 47.8ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:20:58 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+6e/pLo4WBtwAESjF462pLwKy9MJYoTLcgVmCFq5HQkyefA160yziapizhC7G8v73LSd2Y5/hEd2dYQg5/N5/w=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:20:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:21:39 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.2ms)
+Completed 200 OK in 27515ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:22:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.0ms)
+Completed 200 OK in 13094ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-02-13 09:24:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:27:35 -0500
+Processing by SessionsController#new as HTML
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:27:44 -0500
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (3.0ms)
+Completed 200 OK in 8341ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T2O8SVAr4dVV34n7NXA4nzMz/y4iE1Xom4YIdMMXy74RopVU+FMu39fpSwvoL/QbNCn/EDjx4vYfMJkC0//JHA==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 16ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:27:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:27:46 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SwML2tqYanjRoSAOO72vpSDcpopq80BlJ65m76w0paEVwiLHcuClclOX4v7m4mMhJ8amtHAR93ujGPeZvNynAw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:27:46 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.5ms)
+Completed 200 OK in 11695ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:28:00 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.8ms)
+Completed 200 OK in 81370ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:29:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:29:53 -0500
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (111.6ms)
+Completed 200 OK in 26011ms (Views: 282.0ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 73ms (Views: 52.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:30:05 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EAmem623lUcBNCgW/6xNMHxpgTg4/SQHRBscIj/dhMfY6E08HDLTs4fDc9YQ8E9acItEQ91/Ur+rUIj8fkbM6Q=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :user_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:30:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.0ms)
+Completed 200 OK in 24125ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:30:35 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.8ms)
+Completed 200 OK in 14736ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:30:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WS3WiY5n6T8ueKWEjAjcmnYm7kFavAkfzihUKVYX/+GRzAUuP+Kvy6iP/kRjVN7wesQrOr8+f6chY8D3F4y3zw==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:30:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 82ms (Views: 75.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:31:05 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MTRMm4Tp6cDpX7wad9GLFaaIQGwsKZohxIC0SLomm5L51Z88NWyvNG+o59qYjYl/qmqFF8mr7JkryyCW+73TvA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:31:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.4ms)
+Completed 200 OK in 13187ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:32:08 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (143.6ms)
+Completed 200 OK in 11170ms (Views: 303.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:32:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.0ms)
+Completed 200 OK in 3930ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:32:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OeaeMaKq2c8pm2wHNikA5DDHbo090tOmRkzX42eG8M708fF7UyEmJ1tjsOkyAd1kcsHJMTymxQ4yBhuHbTu5hw==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 16ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:32:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 100ms (Views: 93.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:32:38 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zG0aRtd0q9DXNuWoBGRY4f4EHYtpGf2CcKv0dF6+hlcBenUMJv9UOKXOOUYATIVhvAK6N2ht6yoE4TgQVAPPHg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:32:38 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+Completed 200 OK in 4492ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:32:48 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (4.4ms)
+Completed 200 OK in 13533ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:34:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NwWV4Yxgx8/5EDfteqwDrwm1LGXrf8lxYzputfztia/6Evqrfes4J4vo6wN+hN4vS7OL2eoL39kXcKLR9lDA5g==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:34:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:37:04 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"o0BGECVEsq1frJr6FpHRB5a1WePjwKZipuI1r6TABqFuVyla1M9NRS1URhQSuQyH1LP+X+K0sMrSqPnLrn1P6A=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:37:04 -0500
+Processing by SessionsController#new as HTML
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:37:59 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 242ms (Views: 216.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:38:16 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AxClt5FO8FzztZjFJB+BenaXunklCNu4x3QQfbnBkjDOB8r9YMUPtIFNRCsgN1z6NJEdxSR8zRCzPtwZs3zbeQ=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:38:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (156.4ms)
+Completed 200 OK in 100601ms (Views: 198.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:40:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+Completed 200 OK in 18477ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:40:27 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ECPylZCX7rOMJmZ7JfX56SaQ5Q5DIbJie9cBG4oGoa3dNJ3fYRwRW/7eupUh3SRpZJZCskJVpMoPnc1/gLvo5A==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:40:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:40:32 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KqVxP1lENEA478yLayp6J8oqBrwVByMZSSw/8Cmdf1bnsh51qM/LqEoXEGVvAqeniCyhABRzNbE9ZvOUIyA2Hw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:40:32 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.8ms)
+Completed 200 OK in 9958ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:40:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HNI7UzsCTVAm9Q/OjeDTD1xkW+D77ZvEI0jnHveKyVfRxVQZyomyuFQN0yCJyA6PHmL8XPqZjWxXAit6/TeAHg==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:40:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 61ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:40:57 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3Ww0RBWyVPbgu357KqtiVlXC3HzW6UXobtWbjgWw6EMQe1sO5DmrHpJDopUug7/WF8R7wNedU0Aan1fqDw2hCg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:40:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+Started GET "/rails/info/routes" for 127.0.0.1 at 2019-02-13 09:41:38 -0500
+  Rendered sessions/new.erb within layouts/application (2.2ms)
+Completed 200 OK in 41194ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (32.3ms)
+  Rendered /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 69ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:42:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:42:18 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"faQJdJwsEB+Igm9+vp/l4l0+/BSk2I6rSM6fh2qe/YKws2Y+bafv9/p6s5C6tzhiHzhbqKWsmAM8hFPjYCO0yw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:42:18 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.1ms)
+Completed 200 OK in 35804ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:42:56 -0500
+Processing by SessionsController#new as HTML
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:43:04 -0500
+Processing by SessionsController#create as HTML
+  Rendering sessions/new.erb within layouts/application
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o+tQ4kza8RlTlRUF7Qf3VkaN8s4ihPsn5oMyZWP0B9Bu/D+ovVEO8SFtyevpLyrWBItVciPw7Y+Syf4BaUlOmQ==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  Rendered sessions/new.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 8511ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:43:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:43:07 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/lJDo3krRtWB/Sw/Rl2h+zNm1ELbulV7WToyFqf3xzwzRSzpiKC5PfMF8NFCdXx7cWBz/trOQ9MtcP5yrUqOdQ=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:43:07 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+Completed 200 OK in 58821ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:44:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2IkApZ+yBbeMHFqQ6gVOuuDCyOL2A2gnOHf7NWhWSDQVnm/vbjn6X/7khn7uLZM6osRvXvd3fo9MPTdRYusBfQ==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:44:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:44:36 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m6TDoMwUfgQuQ3a+EldjIeLJYqziJPgnjV883wJhi6FWs6zqPZ+B7Fy7qlAWf76hoM/FEONQ7o/5FfC7CNzC6A=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:44:36 -0500
+Processing by SessionsController#new as HTML
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:45:49 -0500
+  Rendering sessions/new.erb within layouts/application
+Processing by UsersController#show as HTML
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+Completed 200 OK in 73274ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered users/show.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 115ms (Views: 84.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:45:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zevspilman/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/BuRqpD37llIMHdABDb50sfjeXOZypsrXd8BtjNDnBExDP7gYXwRsTrIq64AHiRSheXez5i+jYMplc3SOf7VWA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:45:56 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:46:25 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.erb within layouts/application (103.8ms)
+  Rendering sessions/new.erb within layouts/application
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:46:31 -0500
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/BuRqpD37llIMHdABDb50sfjeXOZypsrXd8BtjNDnBExDP7gYXwRsTrIq64AHiRSheXez5i+jYMplc3SOf7VWA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:46:31 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.2ms)
+Completed 200 OK in 1133ms (Views: 112.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 36313ms (Views: 7624.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 7518ms (Views: 1190.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 09:55:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFoCc+5YbvQyWL8JVRucP5L/bjAY8mksrj24ZvhOOCN5TW05H9ORHECgY+dRM0G/0PnJjBmGf4Tad3QC8vNxag==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 09:55:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 87ms (Views: 80.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 09:55:34 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LiOpSaUzZRBZdfRNpKH9WoRertqXoLhVBOIqqvcOYn7jNMYDVLia+CuNKKOgiSDaxlgJZpbUrv1wqObO/bMrNw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 09:55:34 -0500
+Processing by SessionsController#new as HTML
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:01:20 -0500
+  Rendering sessions/new.erb within layouts/application
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.erb within layouts/application (5.1ms)
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.3ms)
+Completed 200 OK in 2380ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 349024ms (Views: 2404.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:01:27 -0500
+Processing by SessionsController#new as HTML
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:01:35 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:01:35 -0500
+  Rendering sessions/new.erb within layouts/application
+Processing by SessionsController#new as HTML
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.erb within layouts/application (5.0ms)
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.5ms)
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.5ms)
+Completed 200 OK in 12005ms (Views: 3860.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3867ms (Views: 1831.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1835ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 10:01:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vIRDhTUhCnIZFEuTr2asulrIMeWHnFKt3BPqWN9CtmpxkyzPxKr1mmvsl32rTnE6GM6WWYboRAWoWSY81f//Iw==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:01:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 10:01:58 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ePL5Zv+CuVMvj0Ob0SkLjcApTcWdww49kxMxlPdpg5O15ZYsDglGu113n3XVAdYNgi/qeZy3GJXnWf3w/dTK2g=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:01:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.6ms)
+Completed 200 OK in 351449ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:08:09 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:08:35 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.9ms)
+Completed 200 OK in 35067ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 10:09:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pNtmUWRFK+dFf6jchE6CVa/l6PS711nsePHwTwhBNwfvPR79z9nW0zh20ZD897m3rEC58cP7/CpQ6zzt4zMNtA==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 22ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:09:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 57ms (Views: 45.3ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 10:09:26 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yegtThDHuPddtLomFuwnVroo/cQyNyEe51YcsYgg0caCDlXiu1tFwyC9w2puVRy0uY2swUobhNjPTNATY1LrdQ=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 8655ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:09:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 64ms (Views: 49.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:09:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.6ms)
+Completed 200 OK in 2081ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:10:15 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.1ms)
+Completed 200 OK in 5119ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 10:10:25 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9N0V54EsU61v/ufvxH0LQKxKhh2s2hl2ql5uNQpgPcV10VQyLEl65XEkyTxDiLbST8fl1ygzDz2XRSaqGbVv0A==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:22
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:10:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 10:10:29 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YXWRle9/0YvY7dSEzwJ3H/MLywH1DIwNQs16UUdOFPXgedBAQhr4w8Y3+ldI98qNEIaoy3HlmkZ/1jLOVJtG4A=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3828ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:10:33 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.1ms)
+Completed 200 OK in 5177ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 10:11:38 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwzUKM79YXycMgir8nv4L+Vnj4+/RTO+MIpITU1Ii5GWAJX9Y5hINILoJnh1jkW9BursRTusJfUNkQDSXp3ZhA==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:21
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:11:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 39ms (Views: 33.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:12:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:12:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2019-02-13 10:12:47 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/2" for 127.0.0.1 at 2019-02-13 10:13:25 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Aqts4KtJRCKYDtpU7lKwQPqOPybX2fNtqk2cUZRYoDtTS/DIjR4tyKeN7VKrzuj7ww4YWr1sSx0QXE7Iu9nGw==", "user"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "image"=>"data:image/jpeg;base64,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"}, "commit"=>"Update User", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:47
+  [1m[36mUser Update (8.0ms)[0m  [1m[33mUPDATE "users" SET "image" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["image", "data:image/jpeg;base64,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"], ["updated_at", "2019-02-13 15:13:25.378375"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:47
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:47
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 16ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:13:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 10:13:31 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 54ms (Views: 47.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2019-02-13 10:13:33 -0500
+Processing by AppointmentsController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:13:33 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:15:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 96ms (Views: 60.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:15:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2019-02-13 10:15:51 -0500
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:70
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:34
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:38
+  [1m[36mCACHE Appointment Load (0.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."vehicle_id" = ? LIMIT ?[0m  [["vehicle_id", 2], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:39
+  Rendered vehicles/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 54ms (Views: 47.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2019-02-13 10:15:52 -0500
+Processing by AppointmentsController#new as HTML
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (11.5ms)
+  Rendered appointments/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2019-02-13 10:15:55 -0500
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:74
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/show.html.erb:25
+  Rendered appointments/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 2771ms (Views: 82.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:16:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 66ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-13 10:16:12 -0500
+Processing by AppointmentsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :mechanic_authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:16:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 10:16:40 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wDmioLGp1iDwQr/narTLC5dp2vAgCAmiUU1R+ntsDDZBNeN1HMz/aO6YkTTtQXaZdOS5OqThH+lsVhllaLleIw==", "session"=>{"username"=>"Peter Griffin", "password"=>"[FILTERED]", "user_type"=>"user"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Peter Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:21
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-13 10:16:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 10:16:42 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zrr8S+fbdhoDQAb+P7pOJjMTcOVr3yxvnVbuW40A5Rfntr2eSr5fUh2aKC24T/O00J4TL+82OiSgTabEntW3Ag=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:16:42 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2019-02-13 10:16:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ONIcDen/DgaCocJgxEHR08q2fRPBC6kHdwXrFx7h7HS53l3YRJonTpx77LNDtGxBKTse2UXiv0xKHqOIDTS+YQ==", "session"=>{"username"=>"Mike", "password"=>"[FILTERED]", "user_type"=>"mechanic"}, "commit"=>"Log In"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."username" = ? LIMIT ?[0m  [["username", "Mike"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13
+Redirected to http://localhost:3000/mechanics/1
+Completed 302 Found in 23ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/mechanics/1" for 127.0.0.1 at 2019-02-13 10:16:51 -0500
+Processing by MechanicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mechanics_controller.rb:71
+  Rendering mechanics/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."mechanic_id" = ?[0m  [["mechanic_id", 1]]
+  ↳ app/views/mechanics/show.html.erb:11
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:20
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:22
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:24
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:26
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:28
+  [1m[36mCACHE Vehicle Load (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mechanics/show.html.erb:30
+  Rendered mechanics/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 2451ms (Views: 66.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2019-02-13 10:16:55 -0500
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:18
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:24
+  Rendered appointments/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2473ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/payments" for 127.0.0.1 at 2019-02-13 10:17:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/payments"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started DELETE "/logout" for 127.0.0.1 at 2019-02-13 10:17:05 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Aw9y88yhXBiwmOWOBbxOvXBjBL29jlAtdkYsMe7t83CCAzMmYcR1UK5Cy12CSfMvk+5ndzlnRmZLXWSu/TihZQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-13 10:17:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/new.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
