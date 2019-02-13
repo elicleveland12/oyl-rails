@@ -1,5 +1,7 @@
 class PaymentsController < ApplicationController
   before_action :set_payment, only: [:show, :edit, :update, :destroy]
+  skip_before_action :mechanic_authorized
+  skip_before_action :user_authorized
 
   # GET /payments
   # GET /payments.json
@@ -20,6 +22,7 @@ class PaymentsController < ApplicationController
 
   # GET /payments/1/edit
   def edit
+    @mechanic = Mechanic.find_by(id: @payment.mechanic.id).name
   end
 
   # POST /payments
@@ -70,6 +73,6 @@ class PaymentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def payment_params
-      params.require(:payment).permit(:name_on_card, :card_number, :expiration, :security_code, :user_id, :mechanic_id)
+      params.require(:payment).permit(:name_on_card, :card_number, :expiration, :security_code, :user_id, :mechanic_id, :amount)
     end
 end

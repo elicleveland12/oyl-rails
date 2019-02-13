@@ -29,7 +29,12 @@
 </div>
 
 <div class="field" type="hidden">
-  <%= form.hidden_field :mechanic_id, value: @mechanic_id %>
+  <%= form.hidden_field :mechanic_id, value: session[:mechanic_id] %>
+</div>
+
+<div class="field">
+  <%= form.label :user_id %>
+  <%= form.number_field :user_id %>
 </div>
 
 
@@ -62,13 +67,13 @@
 
   <div class="field">
     <%= form.label :mechanic_id %>
-    <%= form.text_field :mechanic_id, value: @mechanic_id %>
+    <%= form.text_field :mechanic_id, value: @mechanic %>
   </div>
 
   <% end %>
 
   <div class="field">
-    $<%= form.number_field :amount, step: 0.01 %>
+    $<%= form.number_field :amount %>
   </div>
 
   <div class="actions">

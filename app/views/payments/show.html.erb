@@ -1,5 +1,17 @@
 <p id="notice"><%= notice %></p>
+<% if session[:mechanic_id] %>
 
+<p>
+  <strong>User:</strong>
+  <%= @payment.user_id %>
+</p>
+
+<p>
+  <strong>Mechanic:</strong>
+  <%= @payment.mechanic_id %>
+</p>
+
+<% elsif session[:user_id] %>
 <p>
   <strong>Name on card:</strong>
   <%= @payment.name_on_card %>
@@ -30,5 +42,13 @@
   <%= @payment.mechanic_id %>
 </p>
 
-<%= link_to 'Edit', edit_payment_path(@payment) %> |
-<%= link_to 'Back', payments_path %>
+<% end %>
+
+<p>
+  <strong>Amount:</strong>
+  $<%= @payment.amount %>
+</p>
+
+
+<%= link_to 'Mechanic', mechanic_path(@payment.mechanic.id) %> |
+<%= link_to 'User', user_path(@payment.user.id) %>
