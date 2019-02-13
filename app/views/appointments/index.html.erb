@@ -24,7 +24,7 @@
         <td><%= Vehicle.find(appointment.vehicle_id).model %></td>
 
         <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Accept', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
