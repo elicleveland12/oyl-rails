@@ -1,17 +1,20 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-  skip_before_action :user_authorized, only: [:index,:edit, :show]
+  skip_before_action :user_authorized, only: [:index,:edit, :show, :update, :edit]
   skip_before_action :mechanic_authorized, only: [:new, :create, :show, :destroy]
   # GET /appointments
   # GET /appointments.json
   def index
     @appointments = Appointment.all
+<<<<<<< HEAD
+=======
+
+>>>>>>> 12ffb87900bc4818d63b509f28b7807c5a7c3be3
   end
 
   # GET /appointments/1
   # GET /appointments/1.json
   def show
-    byebug
   end
 
   # GET /appointments/new
@@ -30,7 +33,7 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-    byebug
+
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
@@ -45,7 +48,7 @@ class AppointmentsController < ApplicationController
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
   def update
-    byebug
+
     respond_to do |format|
       if @appointment.update(appointment_params)
         format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
