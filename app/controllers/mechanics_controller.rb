@@ -73,6 +73,6 @@ class MechanicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mechanic_params
-      params.require(:mechanic).permit(:name, :experience, :locaiton, :range, :password, :username)
+      params.require(:mechanic).permit(:name, :experience, :locaiton, :range, :password, :username, :user_id)
     end
 end

@@ -3,32 +3,30 @@ class SessionsController < ApplicationController
   skip_before_action :user_authorized, only: [:new, :create, :destroy]
   skip_before_action :mechanic_authorized, only: [:new, :create, :destroy]
 
-
   def new
   end
 
   def create
-
    if params[:session][:user_type] == "mechanic"
+     if params[:session][:password] == Mechanic.find_by(username: params[:session][:username]).password
      session[:mechanic_id] = Mechanic.find_by(username: params[:session][:username]).id
      redirect_to mechanic_path(session[:mechanic_id])
-
    else
-
-      # logged_in_person = User.find_by_name(params[username]).id || Mechani
-      # if logged_in_person.class == User
-
-      session[:user_id] = User.find_by(username: params[:session][:username]).id
-      # else
-      # logged_in_person session[:mechanic_id]
-      # session[:mechanic_id] = params[:mechanic_id]
-
-      redirect_to user_path(session[:user_id])
+     flash[:message] = "Incorrect username or password."
+     redirect_to '/'
+   end
+  elsif params[:session][:user_type] == "user"
+   if params[:session][:password] == User.find_by(username: params[:session][:username]).password
+    session[:user_id] = User.find_by(username: params[:session][:username]).id
+    redirect_to user_path(session[:user_id])
+  else
+    flash[:message] = "Incorrect username or password."
+    redirect_to '/'
     end
   end
+end
 
   def destroy
-
   session[:user_id] = nil
   session[:mechanic_id] = nil
   redirect_to '/'
