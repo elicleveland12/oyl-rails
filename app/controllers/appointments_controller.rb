@@ -6,10 +6,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     @appointments = Appointment.all
-<<<<<<< HEAD
-=======
 
->>>>>>> 12ffb87900bc4818d63b509f28b7807c5a7c3be3
   end
 
   # GET /appointments/1
