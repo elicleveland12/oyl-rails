@@ -20,6 +20,3 @@
   Make: <%= link_to Vehicle.find(@appointment.vehicle_id).model, Vehicle.find(@appointment.vehicle_id) %>
 
 </p>
-
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', @appointment.vehicle.user %>

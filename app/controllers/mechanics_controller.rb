@@ -28,10 +28,10 @@ class MechanicsController < ApplicationController
   # POST /mechanics.json
   def create
     @mechanic = Mechanic.new(mechanic_params)
-    byebug
+
     respond_to do |format|
       if @mechanic.save
-        #session[:mechanic_id] = @mechanic.id
+        session[:mechanic_id] = @mechanic.id
         format.html { redirect_to @mechanic, notice: 'Mechanic was successfully created.' }
         format.json { render :show, status: :created, location: @mechanic }
       else
