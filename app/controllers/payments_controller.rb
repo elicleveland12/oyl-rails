@@ -15,6 +15,7 @@ class PaymentsController < ApplicationController
   # GET /payments/new
   def new
     @payment = Payment.new
+    @mechanic_id = flash[:mechanic_id]
   end
 
   # GET /payments/1/edit
