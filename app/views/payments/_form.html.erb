@@ -10,6 +10,30 @@
       </ul>
     </div>
   <% end %>
+<% if session[:mechanic_id] %>
+
+<div class="field" type="hidden">
+  <%= form.hidden_field :name_on_card %>
+</div>
+
+<div class="field" type="hidden">
+  <%= form.hidden_field :card_number %>
+</div>
+
+<div class="field" type="hidden">
+  <%= form.hidden_field :expiration %>
+</div>
+
+<div class="field" type="hidden">
+  <%= form.hidden_field :security_code %>
+</div>
+
+<div class="field" type="hidden">
+  <%= form.hidden_field :mechanic_id, value: @mechanic_id %>
+</div>
+
+
+<% elsif session[:user_id] %>
 
   <div class="field">
     <%= form.label :name_on_card %>
@@ -38,7 +62,13 @@
 
   <div class="field">
     <%= form.label :mechanic_id %>
-    <%= form.number_field :mechanic_id %>
+    <%= form.text_field :mechanic_id, value: @mechanic_id %>
+  </div>
+
+  <% end %>
+
+  <div class="field">
+    <%= form.number_field :amount, step: 0.01 %>
   </div>
 
   <div class="actions">
