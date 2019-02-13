@@ -9,6 +9,7 @@
   <strong>Accepted Appointments:</strong><br>
   __________________________<br>
   <% @mechanic.appointments.each do |appointment| %>
+    <% flash[appointment.id] = Vehicle.find_by(id: appointment.vehicle_id).user.id %>
     <strong>Date:</strong>
     <%= appointment.date %><br>
     <strong>Location:</strong>
@@ -26,8 +27,16 @@
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:plate] %><br>
     <strong>Oil Type:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_type] %><br>
-    <strong>Oil Quantity:</strong>
+    <strong>Oil Qua ntity:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_quantity] %> quarts<br>
+    <p>
+      <%= form_tag new_payment_path, method: :get do %>
+      <%= hidden_field_tag :id, Vehicle.find_by(id: appointment.vehicle_id).user.id %>
+      <%= submit_tag 'Make A New Invoice' %>
+      <% end %>
+
+    </p>
+
     __________________________<br>
   <% end %>
 </div>
@@ -37,8 +46,10 @@
 </p>
 
 <p>
-  <%= button_to "Invoices", new_payment_path, :method => "get" %>
+  <%= button_to "Invoices", payments_path, :method => "get" %>
 </p>
+
+
 
 
 <%= link_to 'Edit', edit_mechanic_path(@mechanic) %> |

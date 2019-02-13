@@ -7,6 +7,11 @@ class PaymentsController < ApplicationController
   # GET /payments.json
   def index
     @payments = Payment.all
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    elsif session[:mechanic_id]
+      @mechanic = Mechanic.find(session[:mechanic_id])
+    end
   end
 
   # GET /payments/1
@@ -16,14 +21,17 @@ class PaymentsController < ApplicationController
 
   # GET /payments/new
   def new
+    byebug
+    @user = params[:id]
     @payment = Payment.new
     @mechanic_id = flash[:mechanic_id]
   end
 
   # GET /payments/1/edit
   def edit
+
     @user_id = session[:user_id]
-    @mechanic = Mechanic.find_by(id: @payment.mechanic.id).name
+    @mechanic = Mechanic.find_by(id: @payment.mechanic.id).id
   end
 
   # POST /payments
