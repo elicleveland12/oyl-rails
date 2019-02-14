@@ -12,7 +12,11 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    #session[:user_id] = params[:id]
+    if current_user != @user
+      flash[:hack] = "http://i.stack.imgur.com/SBv4T.gif"
+      flash[:hack_m] = "YOU SHALL NOT PASS"
+      redirect_to user_path(current_user)
+    end
   end
 
   # GET /users/new
