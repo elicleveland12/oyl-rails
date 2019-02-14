@@ -1,36 +1,38 @@
 <head>
   <style>
+
     .apps {
       font-size: 18px;
-      background-color: #dddddd;
+      background-color: rgba(0,0,0,0.2);
       align: center;
       width: 30%;
       height: 400px;
       padding: 25px 5px 25px 5px;
       border: 2px solid green;
       border-radius: 15px;
-      text-align: center;
+      text-align: right;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
     .other {
       text-align: center;
       padding: 0px 0px 0px 0px;
       height: 50px;
-      width: 45%;
+      width: 90%;
     }
     .apps:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+      box-shadow: 0 16px 24px 0 rgba(0,0,0,0.3);
     }
     .logout {
       float: right;
     }
     .vehicle-info {
+      font-size: 20px;
       color: green;
     }
     .label {
+      float: left;
       size: 20px;
     }
-
 
   </style>
 </head>
@@ -39,16 +41,16 @@
 
 <div class="cards">
   <br><br><strong>Accepted Appointments:</strong><br><br>
-  <% counter = 1 %>
   <% @mechanic.appointments.each do |appointment| %>
     <% flash[appointment.id] = Vehicle.find_by(id: appointment.vehicle_id).user.id %>
-    <strong>Date:</strong>
+    <button class="apps">
+    <strong class="label">Date:</strong>
     <%= appointment.date %><br>
     <strong class="label">Location:</strong>
     <%= appointment.location %><br>
     <strong class="label">Odomenter:</strong>
     <%= appointment.odometer %><br>
-    <strong class="vehicle-info">VEHICLE INFO</strong><br>
+    <strong class="vehicle-info">VEHICLE INFO</strong><br><br>
     <strong class="label">Year:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:year] %><br>
     <strong class="label">Make:</strong>
@@ -59,29 +61,28 @@
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:plate] %><br>
     <strong class="label">Oil Type:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_type] %><br>
-    <strong>Oil Qua ntity:</strong>
+    <strong class="label">Oil Quantity:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_quantity] %> quarts<br>
-    <p>
+    <p><br>
       <%= form_tag new_payment_path, method: :get do %>
       <%= hidden_field_tag :id, Vehicle.find_by(id: appointment.vehicle_id).user.id %>
-      <%= submit_tag 'Make A New Invoice' %>
+      <%= submit_tag 'Make A New Invoice', class: "more-buttons label" %>
       <% end %>
-
     </p>
-
-    __________________________<br>
+    </button>
   <% end %>
 </div>
 
 <br><br><strong>More Options: </strong><br><br>
 <p>
-  <%= button_to "Service Requests", appointments_path, :method => "get" %>
+  <%= button_to "Service Requests", appointments_path, :method => "get", class: "apps other" %>
 </p>
 
 <p>
-  <%= button_to "Invoices", payments_path, :method => "get" %>
+  <%= button_to "Invoices", payments_path, :method => "get", class: "apps other" %>
 </p>
 
+<<<<<<< HEAD
 
 
 
@@ -89,3 +90,6 @@
 
 <%= button_to "Invoices", payments_path, :method => "get", class: "apps other" %>
 </p><br><br>
+=======
+</p>
+>>>>>>> 3a8fe53ebc6d245401f09d920729024f0d3849a0
