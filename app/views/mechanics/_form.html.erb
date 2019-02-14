@@ -11,39 +11,46 @@
     </div>
   <% end %>
 
+  <div id="whatever">
+<div id="new-form">
+  <div id="new-mechanic-form">
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+
+
+    <%= form.text_field :name, placeholder: :name, style: "font-family: timeburner; width: 78%; height: 30px;" %><br><br>
   </div>
 
   <div class="field">
-    <%= form.label :experience %>
-    <%= form.number_field :experience %> Years
+
+    <%= form.number_field :experience, placeholder: :experience, style: "font-family: timeburner; width: 78%; height: 30px;" %> Years <br><br>
   </div>
 
   <div class="field">
-    <%= form.label :locaiton %>
-    <%= form.text_field :locaiton %>
+
+    <%= form.text_field :location, placeholder: :location, style: "font-family: timeburner; width: 78%; height: 30px;" %><br><br>
   </div>
 
   <div class="field">
-    <%= form.label :range %>
-    <%= form.number_field :range %> Miles
+
+    <%= form.number_field :range, placeholder: :range, style: "font-family: timeburner; width: 78%; height: 30px;" %> Miles <br><br>
   </div>
 
   <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+
+    <%= form.text_field :username, placeholder: :username, style: "font-family: timeburner; width: 78%; height: 30px;" %><br><br>
   </div>
 
   <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+
+    <%= form.password_field :password, placeholder: :password, style: "font-family: timeburner; width: 78%; height: 30px;" %><br><br>
   </div>
 
 
 
   <div class="actions">
     <%= form.submit %>
+  </div>
+  </div>
+  </div>
   </div>
 <% end %>
