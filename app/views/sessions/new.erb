@@ -1,4 +1,36 @@
 
+
+<head>
+  <style>
+    body.login
+    {
+      background-color: rgba(0,0,0,0.2);
+      background: url("/assets/Untitled.001.jpeg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+
+      background-size: cover;
+      text-align: center;
+      padding: 150px;
+    }
+    body.create
+    {
+
+      margin: 0 auto;
+      float: left;
+
+    }
+
+
+  </style>
+</head>
+
+
+
+
+<body class="login">
+
 <p><%= flash[:message] %><p>
   <p><%= flash[:no_user] %></p>
 <h1>LOGIN</h1>
@@ -12,10 +44,13 @@
 <%= f.label "Mechanic"  %>
 <%= f.radio_button :user_type, 'mechanic' %><br>
 <%= f.submit "Log In", class: "more-buttons" %>
-  <% end %>
+  <% end %><br><br>
 
 
 
---------------------Or----------------------
-<%= button_to " Create New User", new_user_path, method: :get, class: "more-buttons create" %>
-<%= button_to "Create New Mechanic", new_mechanic_path, method: :get, class: "more-buttons create" %>
+<%= button_to " Create New User", new_user_path, method: :get, class: "more-buttons " %>
+<%= button_to "Create New Mechanic", new_mechanic_path, method: :get, class: "more-buttons" %>
+
+
+
+</body>

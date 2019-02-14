@@ -25,7 +25,7 @@
 </head>
 
 <p id="notice"><%= notice %></p>
-
+<body>
 <p>
   <img class="prof-img" src="<%= @user.image %>">
 </p>
@@ -36,7 +36,11 @@
   <% @user.vehicles.each do |vehicle| %>
 <p>
     <a class="car-img" href="<%= vehicle_path(vehicle) %>">
+      <% if vehicle.image %>
       <img src="<%=vehicle.image %>" alt="<%= vehicle.model %>" style="width:150px;height;100px;">
+      <% else %>
+      <img src="https://www.jimpeplinski.ca/wp-content/uploads/2017/02/fleet-1.gif" alt="<%= vehicle.model %>" style="width:150px;height;100px;">
+      <% end %>
     </a>
 </p>
 <p><%= vehicle.model %></p>
@@ -46,3 +50,4 @@
 <%= button_to "Add A Vehicle", new_vehicle_path, :method => "get", class: "more-buttons add-vehicle-card" %>
 <br>
 <%= button_to "Your Invoices", payments_path, :method => "get", class: "more-buttons view_invoices-card" %>
+</body>
