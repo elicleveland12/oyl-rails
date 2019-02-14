@@ -16,7 +16,11 @@ class UsersController < ApplicationController
     if current_user != @user
       flash[:hack] = "http://i.stack.imgur.com/SBv4T.gif"
       flash[:hack_m] = "YOU SHALL NOT PASS"
-      redirect_to user_path(current_user)
+      if user_logged_in?
+        redirect_to user_path(current_user)
+      else
+      redirect_to mechanic_path(current_mechanic)
+    end
     end
   end
 
