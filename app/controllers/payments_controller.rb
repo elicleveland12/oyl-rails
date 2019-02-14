@@ -21,7 +21,6 @@ class PaymentsController < ApplicationController
 
   # GET /payments/new
   def new
-    byebug
     @user = params[:id]
     @payment = Payment.new
     @mechanic_id = flash[:mechanic_id]
