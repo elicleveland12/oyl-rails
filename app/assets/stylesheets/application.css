@@ -18,13 +18,27 @@
 
      body {
        background-image: url("/assets/brickwall.png");
+       text-align: center;
      }
 
      nav {
-       position: relative;
-       background-color: #dddddd;
+       position: fixed;
+
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       border-top: solid rgb(38, 38, 38, 1);
+
+       background-color: rgb(242, 242, 242, 1) ;
        padding: 10px;
        height: 35px;
+     }
+     .header
+     {
+       position: relative;
+       left: 0;
+       top: 0;
+       width: 100%;
      }
      .logout {
        float: right;

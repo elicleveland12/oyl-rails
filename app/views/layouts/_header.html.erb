@@ -8,7 +8,7 @@
 
 </style>
 </head>
-
+<div class="header">
 <p><% if session[:mechanic_id] %>
 <strong>Mechanic name: </strong><%= Mechanic.find_by(id: session[:mechanic_id]).name %>
 <% elsif session[:user_id] %>
@@ -16,3 +16,4 @@
 <% end %>
 <img class="logo" src="http://oyl.io/wp-content/uploads/2017/02/cropped-cropped-cropped-cropped-oyl-logo-main.001.jpeg" alt="oyl logo" style="width:40px;height:40px;">
 </p>
+</div>
