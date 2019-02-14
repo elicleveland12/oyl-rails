@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+ <head>
+   <style>
+
+     body {
+       background-image: url("/assets/brickwall.png");
+     }
+
+     nav {
+       position: relative;
+       background-color: #dddddd;
+       padding: 10px;
+       height: 35px;
+     }
+     .logout {
+       float: right;
+     }
+     .more-buttons {
+       padding-right: 40px;
+       padding-left: 40px;
+       height: 30px;
+       border-radius: 15px;
+     }
+     .more-buttons:hover {
+       box-shadow: 0 16px 24px 0 rgba(0,0,0,0.3);
+     }
+     .add-vehicle-card {
+       padding-right: 40px;
+       padding-left: 40px;
+       height: 30px;
+       border-radius: 15px;
+     }
+     .view-invoices-card {
+       padding-right: 40px;
+       padding-left: 40px;
+       height: 30px;
+       border-radius: 15px;
+     }
+     .prof-img {
+       border-radius: 10px;
+     }
+     .create {
+       float: left;
+     }
+
+   </style>
+ </head>

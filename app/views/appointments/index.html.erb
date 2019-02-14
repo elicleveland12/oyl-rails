@@ -19,21 +19,12 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.date %></td>
+        <td><%= appointment.date.time.month %>/<%= appointment.date.time.day %>/<%= appointment.date.time.year %> at <% if appointment.date.time.hour <= 13 %> <%= appointment.date.time.hour %>:00 am <% else %> <%= appointment.date.time.hour - 12 %>:00 pm <% end %> </td>
         <td><%= appointment.location %></td>
-        <td><%= appointment.odometer %></td>
-        <td><%= appointment.mechanic_id %></td>
+        <td><%= appointment.odometer %> Miles</td>
+        <td><%= Mechanic.find_by(id: appointment.mechanic_id).name %></td>
         <td><%= Vehicle.find(appointment.vehicle_id).model %></td>
-        <% if appointment.mechanic_id %>
-          <head>
-            <style>
 
-              tbody {
-                color: green;
-              }
-            </style>
-          </head>
-        <% end %>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Accept', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -12,6 +12,13 @@
   <body>
     <%= render "layouts/header" %>
     <%= yield %>
-    <%= render "layouts/footer" %>
+    <head>
+      <style>
+          body {
+            font-size: 18px;
+          }
+          </style>
+          </head>
+    <br><br><br><%= render "layouts/footer" %>
   </body>
 </html>
