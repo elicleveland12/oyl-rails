@@ -4,7 +4,7 @@
 <head>
   <style>
 
-    .apps {
+    /* .apps {
       font-size: 18px;
       background-color: rgba(0,0,0,0.2);
       align: center;
@@ -15,14 +15,24 @@
       border-radius: 15px;
       text-align: right;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    } */
+    .cards {
+      position: relative;
+      width: 100%;
+      height: 100;
     }
     .other {
+      font-size: 18px;
+      background-color: rgba(0,0,0,0.2);
       text-align: center;
       padding: 0px 0px 0px 0px;
+      border: 2px solid #f1f1f1;
+      border-radius: 15px;
       height: 50px;
       width: 90%;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
-    .apps:hover {
+    .other:hover {
       box-shadow: 0 16px 24px 0 rgba(0,0,0,0.3);
     }
     .logout {
@@ -37,6 +47,55 @@
       size: 20px;
     }
 
+    .flip-card {
+      float:left;
+      background-color: transparent;
+      padding: 25px 5px 25px 5px;
+      width: 30%;
+      height: 400px;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      line-height: 1.6;
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      border: 1px solid #f1f1f1;
+      border-radius: 15px;
+
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateX(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-color: transparent;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: rgba(0,0,0,0.2);
+      color: white;
+      float: center;
+      transform: rotateX(180deg);
+    }
   </style>
 </head>
 
@@ -46,14 +105,23 @@
   <br><br><strong>Accepted Appointments:</strong><br><br>
   <% @mechanic.appointments.each do |appointment| %>
     <% flash[appointment.id] = Vehicle.find_by(id: appointment.vehicle_id).user.id %>
-    <button class="apps">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <% if appointment.vehicle.image %>
+          <img src="<%= appointment.vehicle.image %>" alt="vehicle" style="align:center;height:253px;padding:25px 5px 25px 5px;border-radius:35px;">
+          <% else %>
+          <img src="https://www.jimpeplinski.ca/wp-content/uploads/2017/02/fleet-1.gif" alt="vehicle" style="align:center;height:400px;padding:25px 5px 25px 5px;border-radius:15px;">
+          <% end %>
+        </div>
+        <div class="flip-card-back">
     <strong class="label">Date:</strong>
     <%= appointment.date %><br>
     <strong class="label">Location:</strong>
     <%= appointment.location %><br>
+    <strong class="vehicle-info">VEHICLE INFO</strong><br><br>
     <strong class="label">Odomenter:</strong>
     <%= appointment.odometer %><br>
-    <strong class="vehicle-info">VEHICLE INFO</strong><br><br>
     <strong class="label">Year:</strong>
     <%= Vehicle.find_by(id: appointment.vehicle_id)[:year] %><br>
     <strong class="label">Make:</strong>
@@ -72,11 +140,12 @@
       <%= submit_tag 'Make A New Invoice', class: "more-buttons label" %>
       <% end %>
     </p>
-    </button>
+      </div>
+    </div>
+  </div>
   <% end %>
 </div>
 
-<br><br><strong>More Options: </strong><br><br>
 <p>
   <%= button_to "Service Requests", appointments_path, :method => "get", class: "apps other" %>
 </p>

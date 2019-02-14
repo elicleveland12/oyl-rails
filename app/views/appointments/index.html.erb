@@ -22,7 +22,11 @@
         <td><%= appointment.date.time.month %>/<%= appointment.date.time.day %>/<%= appointment.date.time.year %> at <% if appointment.date.time.hour <= 13 %> <%= appointment.date.time.hour %>:00 am <% else %> <%= appointment.date.time.hour - 12 %>:00 pm <% end %> </td>
         <td><%= appointment.location %></td>
         <td><%= appointment.odometer %> Miles</td>
+        <% if appointment.mechanic_id %>
         <td><%= Mechanic.find_by(id: appointment.mechanic_id).name %></td>
+        <% else %>
+        <td>Not Yet Assigned</td>
+        <% end %>
         <td><%= Vehicle.find(appointment.vehicle_id).model %></td>
 
         <td><%= link_to 'Show', appointment %></td>
