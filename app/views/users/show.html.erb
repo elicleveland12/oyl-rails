@@ -36,7 +36,7 @@
   <% @user.vehicles.each do |vehicle| %>
 <p>
     <a class="car-img" href="<%= vehicle_path(vehicle) %>">
-      <img src="https://www.jimpeplinski.ca/wp-content/uploads/2017/02/fleet-1.gif" alt="<%= vehicle.model %>" style="width:150px;height;100px;">
+      <img src="<%=vehicle.image %>" alt="<%= vehicle.model %>" style="width:150px;height;100px;">
     </a>
 </p>
 <p><%= vehicle.model %></p>

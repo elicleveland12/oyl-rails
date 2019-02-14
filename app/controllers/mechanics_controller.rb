@@ -2,6 +2,7 @@ class MechanicsController < ApplicationController
   before_action :set_mechanic, only: [:show, :edit, :update, :destroy]
   skip_before_action :user_authorized
   skip_before_action :mechanic_authorized, only: [:new, :create, :show]
+  skip_before_action :unauth, only: [:new, :create]
   # GET /mechanics
   # GET /mechanics.json
   def index

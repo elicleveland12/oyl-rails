@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   skip_before_action :mechanic_authorized
   skip_before_action :user_authorized, only: [:new, :create, :show]
+  skip_before_action :unauth, only: [:new, :create]
 
   # GET /users
   # GET /users.json

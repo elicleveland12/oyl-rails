@@ -2,5 +2,5 @@
 
 <%= render 'form', payment: @payment %>
 
-<%= link_to 'Show', @payment %> |
-<%= link_to 'Back', payments_path %>
+
+<%= button_to 'Back', payments_path, method: :get, class: "more-buttons" %>

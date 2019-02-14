@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-  skip_before_action :user_authorized, only: [:index,:edit, :show, :update, :edit]
+  skip_before_action :user_authorized, only: [:index,:edit, :show, :update, :edit, :destroy]
   skip_before_action :mechanic_authorized, only: [:new, :create, :show, :destroy]
   # GET /appointments
   # GET /appointments.json
