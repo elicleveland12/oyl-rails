@@ -1,26 +1,42 @@
+<head>
+  <style>
+
+    .cards {
+      font-size: 18px;
+      background-color: rgba(0,0,0,1);
+      align: center;
+      height: 400px;
+      width: 30%;
+      overflow: scroll;
+      padding: 25px 5px 25px 5px;
+      border: 2px solid green;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      background: url(kisspng-sports-car-line-art-car-vector-5acadbf9f37865.0993937015232440259973.gif);
+    }
+
+
+  </style>
+</head>
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <img src="<%= @user.image %>">
 </p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
 
-
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'logout',logout_path, method: :delete %>
-
-<p>
+<div class="cards">
   <strong>Vehicles:</strong>
   <% @user.vehicles.each do |vehicle| %>
-  <p><%= link_to vehicle.model, vehicle %></p>
-  <% end %>
+<p>
+    <a href="<%= vehicle_path(vehicle) %>">
+      <img src="https://www.jimpeplinski.ca/wp-content/uploads/2017/02/fleet-1.gif" alt="<% vehicle.model %>" style="width:150px;height;100px;">
+    </a>
 </p>
+  <% end %>
+</div>
 
 <%= button_to "Add A Vehicle", new_vehicle_path, :method => "get" %>
 

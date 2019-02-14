@@ -1,13 +1,27 @@
 <head>
   <style>
 
+    body {
+      background-image: url("/assets/brickwall.png");
+    }
+
     nav {
       position: relative;
       background-color: #dddddd;
       padding: 10px;
+      height: 35px;
     }
     .logout {
       float: right;
+    }
+    .more-buttons {
+      padding-right: 40px;
+      padding-left: 40px;
+      height: 30px;
+      border-radius: 15px;
+    }
+    .more-buttons:hover {
+      box-shadow: 0 16px 24px 0 rgba(0,0,0,0.3);
     }
 
   </style>
@@ -19,5 +33,5 @@
   <%= link_to User.find_by(id: session[:user_id]).username, user_path(session[:user_id]) %> || <%= link_to "Edit", edit_user_path(session[:user_id]) %>
   <% end %>
   <e class="logout"><% if session[:mechanic_id] || session[:user_id] %>
-    <%= button_to "LOGOUT", logout_path, :method => "delete" %>
+    <%= button_to "LOGOUT", logout_path, :method => "delete", class: "more-buttons" %>
     <% end %></e></nav>
