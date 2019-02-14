@@ -30,11 +30,10 @@
   <%= @vehicle.oil_quantity %> Quarts
 </p>
 
-<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', @vehicle.user %><br>
+<%= button_to 'Edit', edit_vehicle_path(@vehicle), method: :get, class: "more-buttons" %> <br>
 
-<%= button_to "Schedule An Appointment", new_appointment_path, :method => "get" %><br>
+<%= button_to "Schedule An Appointment", new_appointment_path, :method => "get", class: "more-buttons" %><br>
 
 <% if Appointment.find_by(vehicle_id: @vehicle.id) != nil %>
-<%= button_to "My Appointments", appointment_path(Appointment.find_by(vehicle_id: @vehicle.id).id), :method => "get" %>
+<%= button_to "My Appointments", appointment_path(Appointment.find_by(vehicle_id: @vehicle.id).id), :method => "get", class: "more-buttons" %>
 <% end %>

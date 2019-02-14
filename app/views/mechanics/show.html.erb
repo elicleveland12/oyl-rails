@@ -1,3 +1,6 @@
+<img class="prof-img" src="<%= flash[:hack] %>">
+<h1><%= flash[:hack_m] %></h1>
+
 <head>
   <style>
 
@@ -79,17 +82,5 @@
 </p>
 
 <p>
-  <%= button_to "Invoices", payments_path, :method => "get", class: "apps other" %>
+  <%= button_to "My Invoices", payments_path, :method => "get", class: "apps other" %>
 </p>
-
-<<<<<<< HEAD
-
-
-
-<%= link_to 'Edit', edit_mechanic_path(@mechanic) %> |
-
-<%= button_to "Invoices", payments_path, :method => "get", class: "apps other" %>
-</p><br><br>
-=======
-</p>
->>>>>>> 3a8fe53ebc6d245401f09d920729024f0d3849a0

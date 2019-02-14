@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::Base
 before_action :user_authorized
 before_action :mechanic_authorized
+before_action :unauth
 helper_method :current_user
 helper_method :current_mechanic
+
 
 
   def current_user
@@ -27,6 +29,15 @@ helper_method :current_mechanic
 
   def mechanic_authorized
     redirect_to '/' unless mechanic_logged_in?
+  end
+
+  def unauth
+    if mechanic_logged_in?
+    elsif
+      user_logged_in?
+    else
+      redirect_to '/'
+    end
   end
 
 
