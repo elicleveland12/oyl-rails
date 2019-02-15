@@ -90,7 +90,6 @@
     .flip-card-back {
       background-color: rgba(0,0,0,0.2);
       color: white;
-      float: center;
       transform: rotateX(180deg);
     }
   </style>
@@ -113,24 +112,24 @@
         </div>
         <div class="flip-card-back">
     <strong class="label">Date:</strong>
-    <%= appointment.date.time.month %>/<%= appointment.date.time.day %>/<%= appointment.date.time.year %> at <% if appointment.date.time.hour <= 13 %> <%= appointment.date.time.hour %>:00 am <% else %> <%= appointment.date.time.hour - 12 %>:00 pm <% end %> <br>
+    <span style="float:left;padding-left:100px;"><%= appointment.date.time.month %>/<%= appointment.date.time.day %>/<%= appointment.date.time.year %> at <% if appointment.date.time.hour <= 13 %> <%= appointment.date.time.hour %>:00 am <% else %> <%= appointment.date.time.hour - 12 %>:00 pm <% end %></span><br>
     <strong class="label">Location:</strong>
-    <%= appointment.location %><br>
-    <strong class="vehicle-info">VEHICLE INFO</strong><br><br>
+    <span style="float:left;padding-left:100px;"><%= appointment.location %></span><br>
+    <strong class="vehicle-info" style="text-align: center;">VEHICLE INFO</strong><br><br>
     <strong class="label">Odomenter:</strong>
-    <%= appointment.odometer %><br>
+    <span style="float:left;padding-left:100px;"><%= appointment.odometer %></span><br>
     <strong class="label">Year:</strong>
-    <%= Vehicle.find_by(id: appointment.vehicle_id)[:year] %><br>
+    <span style="float:left;padding-left:155px;"><%= Vehicle.find_by(id: appointment.vehicle_id)[:year] %></span><br>
     <strong class="label">Make:</strong>
-    <%= Vehicle.find_by(id: appointment.vehicle_id)[:make] %><br>
+    <span style="float:left;padding-left:145px;"><%= Vehicle.find_by(id: appointment.vehicle_id)[:make] %></span><br>
     <strong class="label">Model:</strong>
-    <%= Vehicle.find_by(id: appointment.vehicle_id)[:model] %><br>
+    <span style="float:left;padding-left:139px;"><%= Vehicle.find_by(id: appointment.vehicle_id)[:model] %></span><br>
     <strong class="label">Plate Number:</strong>
-    <%= Vehicle.find_by(id: appointment.vehicle_id)[:plate] %><br>
+    <span style="float:left;padding-left:83px;"><%= Vehicle.find_by(id: appointment.vehicle_id)[:plate] %></span><br>
     <strong class="label">Oil Type:</strong>
-    <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_type] %><br>
+    <span style="float:left;padding-left:128px;"><%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_type] %></span><br>
     <strong class="label">Oil Quantity:</strong>
-    <%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_quantity] %> quarts<br>
+    <span style="float:left;padding-left:102px;"><%= Vehicle.find_by(id: appointment.vehicle_id)[:oil_quantity] %> quarts</span><br>
     <p><br>
       <%= form_tag new_payment_path, method: :get do %>
       <%= hidden_field_tag :id, Vehicle.find_by(id: appointment.vehicle_id).user.id %>

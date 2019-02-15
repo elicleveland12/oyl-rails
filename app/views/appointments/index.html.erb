@@ -29,8 +29,8 @@
         <% end %>
         <td><%= Vehicle.find(appointment.vehicle_id).model %></td>
 
-        <td><%= button_to 'Show', appointment, class: "more-buttons" %></td>
-        <td><%= button_to 'Accept', edit_appointment_path(appointment), class: "more-buttons" %></td>
+        <td><%= button_to 'Show', appointment, method: :get, class: "more-buttons" %></td>
+        <td><%= button_to 'Accept', edit_appointment_path(appointment), method: :get, class: "more-buttons" %></td>
         <td><%= button_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: "more-buttons" %></td>
       </tr>
     <% end %>
