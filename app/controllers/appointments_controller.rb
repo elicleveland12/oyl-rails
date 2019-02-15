@@ -28,7 +28,7 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-    @appointment = Appointment.new(appointment_params)
+@appointment = Appointment.new(appointment_params)
 
     respond_to do |format|
       if @appointment.save
@@ -40,6 +40,7 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
@@ -55,6 +56,7 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+
 
   # DELETE /appointments/1
   # DELETE /appointments/1.json
@@ -74,6 +76,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:date, :location, :odometer, :vehicle_id, :mechanic_id)
+      params.require(:appointment).permit(:date, :location, :odometer, :vehicle_id, :mechanic_id, :address_one, :city, :state, :zip_code)
     end
 end

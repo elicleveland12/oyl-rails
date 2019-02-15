@@ -32,7 +32,10 @@
 
 <%= button_to 'Edit', edit_vehicle_path(@vehicle), method: :get, class: "more-buttons" %> <br>
 
+<%= button_to 'Delete', @vehicle, method: :delete, data: { confirm: 'Are you sure?' }, class: "more-buttons" %><br>
+
 <%= button_to "Schedule An Appointment", new_appointment_path, :method => "get", class: "more-buttons" %><br>
+
 
 <% if Appointment.find_by(vehicle_id: @vehicle.id) != nil %>
 <%= button_to "My Appointments", appointment_path(Appointment.find_by(vehicle_id: @vehicle.id).id), :method => "get", class: "more-buttons" %>

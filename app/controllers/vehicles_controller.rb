@@ -28,8 +28,12 @@ class VehiclesController < ApplicationController
   # POST /vehicles
   # POST /vehicles.json
   def create
+    if params[:o_type] == nil || params[:viscosity] == nil
+     flash[:no_oil] = "You Must Enter A Oil Type And Oil Viscosity"
+     redirect_to new_vehicle_path
+   else
+    params[:vehicle][:oil_type] = params[:o_type] + params[:viscosity]
     @vehicle = Vehicle.new(vehicle_params)
-    @vehicle.oil_type = "#{params[:o_type]} #{params[:viscosity]}"
     respond_to do |format|
       if @vehicle.save
         format.html { redirect_to @vehicle, notice: 'Vehicle was successfully created.' }
@@ -40,11 +44,17 @@ class VehiclesController < ApplicationController
       end
     end
   end
+end
 
   # PATCH/PUT /vehicles/1
   # PATCH/PUT /vehicles/1.json
   def update
+    if params[:o_type] == nil || params[:viscosity] == nil
+     flash[:no_oil] = "You Must Enter A Oil Type And Oil Viscosity"
+     redirect_to edit_vehicle_path
+   else
     respond_to do |format|
+      params[:vehicle][:oil_type] = params[:o_type] + params[:viscosity]
       if @vehicle.update(vehicle_params)
         format.html { redirect_to @vehicle, notice: 'Vehicle was successfully updated.' }
         format.json { render :show, status: :ok, location: @vehicle }
@@ -54,14 +64,17 @@ class VehiclesController < ApplicationController
       end
     end
   end
+end
 
   # DELETE /vehicles/1
   # DELETE /vehicles/1.json
   def destroy
+    @vehicle.appointments.each do |appointment|
+      appointment.destroy
+    end
     @vehicle.destroy
     respond_to do |format|
-      format.html { redirect_to vehicles_url, notice: 'Vehicle was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to user_path(session[:user_id]), notice: 'Vehicle was successfully destroyed.' }
     end
   end
 

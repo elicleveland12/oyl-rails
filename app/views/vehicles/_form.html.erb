@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-
+<h2 style="color:red;"> <%= flash[:no_oil] %> </h2>
   <div class="field">
         <%= form.number_field :year, placeholder: :year, style: "font-family: timeburner; width: 200px; height: 30px;" %>
   </div>
@@ -28,9 +28,9 @@
     <%= form.text_field :plate, placeholder: :plate, style: "font-family: timeburner; width: 200px; height: 30px;"  %>
   </div>
 
-  <input type="radio" name="<%= :viscosity %>" value="synthetic"> Synthetic
-  <input type="radio" name="<%= :viscosity %>" value="conventional"> Conventional
-  <input type="radio" name="<%= :viscosity %>" value="blend"> Blend
+  <input type="radio" name="<%= :viscosity %>" value=" synthetic"> Synthetic
+  <input type="radio" name="<%= :viscosity %>" value=" conventional"> Conventional
+  <input type="radio" name="<%= :viscosity %>" value=" blend"> Blend
 
   <div class="field">
     <select name="<%= :o_type %>">
