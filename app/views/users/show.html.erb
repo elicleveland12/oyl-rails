@@ -8,7 +8,7 @@
       background-color: rgba(0,0,0,1);
       align: center;
       height: 400px;
-      width: 30%;
+      width: 34%;
       overflow: scroll;
       padding: 25px 5px 25px 5px;
       border: 2px solid green;
@@ -19,6 +19,21 @@
     }
     .car-img:hover {
       box-shadow:  0 40px 40px 0 rgba(0,0,0,0.2);
+    }
+    .other {
+      font-size: 18px;
+      background-color: rgba(0,0,0,0.2);
+      text-align: center;
+      font-family: timeburner;
+      padding: 0px 0px 0px 0px;
+      border: 2px solid #f1f1f1;
+      border-radius: 15px;
+      height: 50px;
+      width: 30%;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .other:hover {
+      box-shadow: 0 16px 24px 0 rgba(0,0,0,0.3);
     }
 
   </style>
@@ -37,7 +52,7 @@
 <p>
     <a class="car-img" href="<%= vehicle_path(vehicle) %>">
       <% if vehicle.image %>
-      <img src="<%=vehicle.image %>" alt="<%= vehicle.model %>" style="width:150px;height;100px;">
+      <img src="<%=vehicle.image %>" alt="<%= vehicle.model %>" style="width:225px;height;150px;">
       <% else %>
       <img src="https://www.jimpeplinski.ca/wp-content/uploads/2017/02/fleet-1.gif" alt="<%= vehicle.model %>" style="width:150px;height;100px;">
       <% end %>
@@ -51,9 +66,9 @@
 
 
 
-<div class="button-div">
-<%= button_to "Add A Vehicle", new_vehicle_path, :method => "get", class: "more-buttons add-vehicle-card" %>
+<div class="mech-buttons">
+<%= button_to "Add A Vehicle", new_vehicle_path, :method => "get", class: "apps other" %>
 <br>
-<%= button_to "Your Invoices", payments_path, :method => "get", class: "more-buttons view_invoices-card" %>
+<%= button_to "Your Invoices", payments_path, :method => "get", class: "apps other" %>
 </div>
 </body>
