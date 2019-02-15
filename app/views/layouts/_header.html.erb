@@ -1,6 +1,8 @@
 <head>
   <style>
 
+
+
 .logo {
   position: absolute;
   right: 50px;
@@ -9,10 +11,10 @@
 </style>
 </head>
 <div class="header">
-<p><% if session[:mechanic_id] %>
-<strong>Mechanic name: </strong><%= Mechanic.find_by(id: session[:mechanic_id]).name %>
+<p style="font-family:timeburner;font-size:18px;text-align:left"><% if session[:mechanic_id] %>
+<strong style="text-decoration:underline;">Mechanic name:</strong><span style="padding-left:10px;"><%= Mechanic.find_by(id: session[:mechanic_id]).name %></span>
 <% elsif session[:user_id] %>
-<strong>Username: </strong><%= User.find_by(id: session[:user_id]).username%>
+<strong style="text-decoration:underline;">Username:</strong><span style="padding-left:10px;"><%= User.find_by(id: session[:user_id]).username%></span>
 <% end %>
 <img class="logo" src="http://oyl.io/wp-content/uploads/2017/02/cropped-cropped-cropped-cropped-oyl-logo-main.001.jpeg" alt="oyl logo" style="width:40px;height:40px;">
 </p>
