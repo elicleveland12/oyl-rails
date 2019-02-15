@@ -16,15 +16,12 @@
       text-align: right;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     } */
-    .cards {
-      position: relative;
-      width: 100%;
-      height: 100;
-    }
+
     .other {
       font-size: 18px;
       background-color: rgba(0,0,0,0.2);
       text-align: center;
+      font-family: timeburner;
       padding: 0px 0px 0px 0px;
       border: 2px solid #f1f1f1;
       border-radius: 15px;
@@ -44,14 +41,15 @@
     }
     .label {
       float: left;
+      margin-left: 10px;
       size: 20px;
     }
 
     .flip-card {
-      float:left;
+      float: left;
       background-color: transparent;
       padding: 25px 5px 25px 5px;
-      width: 30%;
+      width: 32.5%;
       height: 400px;
       perspective: 1000px; /* Remove this if you don't want the 3D effect */
       line-height: 1.6;
@@ -65,7 +63,6 @@
       text-align: center;
       transition: transform 0.8s;
       transform-style: preserve-3d;
-      border: 1px solid #f1f1f1;
       border-radius: 15px;
 
     }
@@ -109,14 +106,14 @@
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <% if appointment.vehicle.image %>
-          <img src="<%= appointment.vehicle.image %>" alt="vehicle" style="align:center;height:253px;padding:25px 5px 25px 5px;border-radius:35px;">
+          <img src="<%= appointment.vehicle.image %>" alt="vehicle" style="align:center;height:253px;max-width:100%;padding:25px 5px 25px 5px;border-radius:35px;">
           <% else %>
           <img src="https://www.jimpeplinski.ca/wp-content/uploads/2017/02/fleet-1.gif" alt="vehicle" style="align:center;height:400px;padding:25px 5px 25px 5px;border-radius:15px;">
           <% end %>
         </div>
         <div class="flip-card-back">
     <strong class="label">Date:</strong>
-    <%= appointment.date %><br>
+    <%= appointment.date.time.month %>/<%= appointment.date.time.day %>/<%= appointment.date.time.year %> at <% if appointment.date.time.hour <= 13 %> <%= appointment.date.time.hour %>:00 am <% else %> <%= appointment.date.time.hour - 12 %>:00 pm <% end %> <br>
     <strong class="label">Location:</strong>
     <%= appointment.location %><br>
     <strong class="vehicle-info">VEHICLE INFO</strong><br><br>
@@ -146,10 +143,8 @@
   <% end %>
 </div>
 
-<p>
-  <%= button_to "Service Requests", appointments_path, :method => "get", class: "apps other" %>
-</p>
+<div class="mech-buttons">
+  <%= button_to "Service Requests", appointments_path, :method => "get", class: "apps other" %><br>
 
-<p>
   <%= button_to "My Invoices", payments_path, :method => "get", class: "apps other" %>
-</p>
+</div>

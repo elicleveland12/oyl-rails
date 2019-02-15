@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <% if session[:mechanic_id] %>
-
+<body>
 <p>
   <strong>User:</strong>
   <%= @payment.user_id %>
@@ -55,4 +55,5 @@
 <p>PAID</p>
 <% else %>
 <p>UNPAID</p>
+</body>
 <% end %>
