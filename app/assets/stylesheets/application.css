@@ -24,6 +24,19 @@
        text-align: center;
        font-family: timeburner;
      }
+     table.pay-index {
+       padding-left: 480px;
+       padding-top: 80px;
+     }
+     table.appt-index {
+       padding-left: 100px;
+       padding-top: 80px;
+     }
+     thead {
+       color: green;
+       font-size: 20px;
+       text-decoration: underline;
+     }
 
      nav {
        position: fixed;
@@ -39,10 +52,10 @@
      .header
      {
        position: relative;
-       left: 0;
+       right: 0;
        top: 0;
        width: 100%;
-        font-family: timeburner;
+       font-family: timeburner;
      }
      .logout {
        float: right;

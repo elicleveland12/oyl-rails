@@ -30,7 +30,7 @@
 <div class="field" type="hidden">
   <%= form.hidden_field :mechanic_id, value: session[:mechanic_id] %>
 </div>
-  
+
   <p>The client is <%= User.find(@user).username %></p>
 <div class="field">
   <%= form.hidden_field :user_id, value:@user %>
